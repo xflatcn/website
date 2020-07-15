@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<head>
+    <title>服务支持</title>
+    <%include include/head_res.html %>
+    <style type="text/css">
+
+        .article-list li{
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            list-style:none;
+        }
+
+        .article-list li a{
+            line-height: 36px;
+            font-size: 16px;
+            color: #2a2a2a;
+        }
+
+        .u-content ul{
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+
+    </style>
+</head>
+<body>
+<%include include/top_nav.html %>
+
+<div class="features-tabs-section" style="margin-top: 100px;">
+    <div class="container">
+        <div class="tabs-wrapper">
+            <ul class="nav nav-tabs justify-content-left" id="feature-tabs">
+                <li>
+                    <a id="head_home" onclick="clickTab(1)" href="#home" class="active" data-toggle="tab" style="font-size: 15px;font-weight: bold">产品问答</a>
+                </li>
+                <li>
+                    <a id="head_profile" onclick="clickTab(2)" href="#profile" data-toggle="tab" style="font-size: 15px;font-weight: bold">插件工具</a>
+                </li>
+                <li>
+                    <a id="head_message" onclick="clickTab(3)" href="#messages" data-toggle="tab" style="font-size: 15px;font-weight: bold">客户留言</a>
+                </li>
+            </ul>
+
+            <div class="tab-content" style="height: auto">
+
+                <div class="tab-pane fade show active" id="home" style="height: auto">
+
+                    <div class="features-section" style="height: auto;">
+                        <div class="container">
+                            <div class="feature">
+                                <div class="row" >
+                                    <div class="main-content col-md-12">
+                                        <section class="u-content">
+                                            <ul class="article-list">
+                                                <li><span style="float: right;margin-top: 7px">2013-12-16</span><i class="fa fa-caret-right"></i><a href="http://www.app365.com/news/416615086441472.jhtml">APP365货运专线系统适用的范围</a></li>
+                                                <li><span style="float: right;margin-top: 7px">2013-10-07</span><i class="fa fa-caret-right"></i><a href="http://www.app365.com/news/317268169622528.jhtml">怎么清除浏览器缓存以及清除DNS缓存的简单命令</a></li>
+                                                <li><span style="float: right;margin-top: 7px">2013-09-17</span><i class="fa fa-caret-right"></i><a href="http://www.app365.com/news/289028288709632.jhtml">如何绑定公司网站独立域名</a></li>
+                                                <li><span style="float: right;margin-top: 7px">2012-12-29</span><i class="fa fa-caret-right"></i><a href="http://www.app365.com/news/4440a99a-8db0-444d-803c-feaa6c2c04c1.jhtml">如何对员工进行系统授权</a></li>
+                                                <li><span style="float: right;margin-top: 7px">2012-12-18</span><i class="fa fa-caret-right"></i><a href="http://www.app365.com/news/a6fb394d-b6d8-410b-8bc9-583ff1e52d56.jhtml">如何快速切换站点</a></li>
+                                                <li><span style="float: right;margin-top: 7px">2012-12-18</span><i class="fa fa-caret-right"></i><a href="http://www.app365.com/news/a4bd68b1-3873-47c9-942b-1fd133baf516.jhtml">怎样进行提货、送货、签收操作</a></li>
+                                                <li><span style="float: right;margin-top: 7px">2012-12-18</span><i class="fa fa-caret-right"></i><a href="http://www.app365.com/news/ea39bf9a-d41e-4afb-98ea-98ba95cec247.jhtml">货物到达站点怎么入库</a></li>
+                                                <li><span style="float: right;margin-top: 7px">2012-12-18</span><i class="fa fa-caret-right"></i><a href="http://www.app365.com/news/653dc0f0-cc1f-4839-9092-d3e54b54617d.jhtml">发货站点如何进行中转外包</a></li>
+                                                <li><span style="float: right;margin-top: 7px">2012-12-18</span><i class="fa fa-caret-right"></i><a href="http://www.app365.com/news/13c99561-6eff-4161-bcd3-a95176b140ed.jhtml">发货站点如何进行专线配载</a></li>
+                                                <li><span style="float: right;margin-top: 7px">2012-12-18</span><i class="fa fa-caret-right"></i><a href="http://www.app365.com/news/b5f8bb75-c7f7-4b3c-b122-f0466e708df1.jhtml">APP365-订单说明</a></li>
+                                            </ul>
+
+                                            <form id="pageForm" action="" method="get">
+                                                <input type="hidden" id="page_num" name="page_num" value="2">
+                                                <input type="hidden" id="page_count" name="page_count" value="3">
+                                            </form>
+                                            <nav>
+                                                <ul style="text-align: center;margin-top: 25px;list-style: none">
+                                                    <p style="float: left">共 21 条记录   1/3页</p>
+                                                    <li style="float: left;margin-left: 20px"><a style="color: #28a745" href="###" onclick="javascript:navPage('prev');">上一页</a></li>
+                                                    <li style="float: left;margin-left: 10px"><a style="color: #28a745" href="###" onclick="javascript:navPage('next');">下一页</a></li>
+                                                    <!--
+                                                    <li><a href="###" onclick="javascript:navPage('prev');">上一页</a></li>
+                                                    <li><a href="###" onclick="javascript:navPage('next');">下一页</a></li>
+                                                    -->
+                                                </ul>
+                                            </nav>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 插件工具 -->
+                <div class="tab-pane fade" id="profile" style="height: auto">
+                    <div class="row">
+                        <div class="col-md-1" >
+                            <img style="height: 55px;height: 55px" src="/images/app365/ems_logo.png" class="pic" alt="testimonial2" />
+                        </div>
+                        <div class="col-md-8">
+                            <p style="font-weight: bold ;font-size: 15px">聚物流站点版</p>
+                            <p style="font-size: 14px;color: #8D959B">为物流公司员工开发的APP，包含任务处理、录单、打印、扫描、跟踪、签收、异常登记、拍照上传等功能</p>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="http://res.app365.com/downloads/android56-ems.apk" style="font-size: 11px" class="btn btn-success">下载</a>
+                            <img style="height: 80px;height: 80px;margin-left: 20px" src="/images/app365/ems_barcode.jpg">
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <img style="height: 55px;height: 55px" src="/images/app365/cust_logo.png" class="pic" alt="testimonial2" />
+                        </div>
+                        <div class="col-md-8">
+                            <p style="font-weight: bold ;font-size: 15px">聚物流客户版</p>
+                            <p style="font-size: 14px;color: #8D959B">为物流公司客户提供的APP，包含在线下单、运单跟踪、网点查询、运价查询、历史订单管理等功能</p>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="http://res.app365.com/downloads/android56-cust.apk" style="font-size: 11px;color: white" class="btn btn-success">下载</a>
+                            <img style="height: 80px;height:80px;margin-left: 20px" src="/images/app365/cust_barcode.jpg">
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <img style="height: 55px;height: 55px" src="/images/app365/driver_logo.png" class="pic" alt="testimonial2" />
+                        </div>
+                        <div class="col-md-8">
+                            <p style="font-weight: bold ;font-size: 15px">聚物流司机版</p>
+                            <p style="font-size: 14px;color: #8D959B">司机使用APP，包含任务调度、在途跟踪、异常反馈、费用登记、签收录入、拍照上传等功能下载</p>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="http://res.app365.com/downloads/android56-driver.apk" style="font-size: 11px;color: white" class="btn btn-success">下载</a>
+                            <img style="height: 80px;height:80px;margin-left: 20px" src="/images/app365/driver_barcode.png">
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <img style="height: 55px;height:55px" src="/images/app365/dianzicheng.jpg" class="pic" alt="testimonial2" />
+                        </div>
+                        <div class="col-md-8">
+                            <p style="font-weight: bold ;font-size: 15px">电子秤接口及标签打印插件</p>
+                            <p style="font-size: 14px;color: #8D959B">基于NPAPI实现的电子秤接口及标签打印插件, 可运行于Chrome和Firefox浏览器</p>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="http://res.app365.com/downloads/npio365.crx" style="font-size: 11px" class="btn btn-success">下载</a>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <img style="height: 55px;height:55px" src="/images/app365/chrome.jpg" class="pic" alt="testimonial2" />
+                        </div>
+                        <div class="col-md-8">
+                            <p style="font-weight: bold ;font-size: 15px">谷歌浏览器</p>
+                            <p style="font-size: 14px;color: #8D959B">谷歌浏览器，版本49，支持xp、win7、win10等.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="http://res.app365.com/downloads/chrome_49.0.2623.112_installer.exe" style="font-size: 11px" class="btn btn-success">下载</a>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <img style="height: 55px;height:55px" src="/images/app365/epson.png" class="pic" alt="testimonial2" />
+                        </div>
+                        <div class="col-md-8">
+                            <p style="font-weight: bold ;font-size: 15px">EPSON LQ-630K 打印驱动程序</p>
+                            <p style="font-size: 14px;color: #8D959B">EPSON LQ-630K 打印机是APP36Z中用于支持运单打印的打印机.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="http://res.app365.com/downloads/epson-lq630k-drv.exe" style="font-size: 11px" class="btn btn-success">下载</a>
+                        </div>
+                    </div>
+                    <hr/>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <img style="height: 55px;height:55px" src="/images/app365/argox.png" class="pic" alt="testimonial2" />
+                        </div>
+                        <div class="col-md-8">
+                            <p style="font-weight: bold ;font-size: 15px">Argox立象 OS-214Plus 条码标签打印驱动程序</p>
+                            <p style="font-size: 14px;color: #8D959B">Argox立象 OS-214Plus 条码打印机是APP365目前支持的条码打印机之一.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="http://res.app365.com/downloads/Argox_7.4.1_M-0.exe" style="font-size: 11px" class="btn btn-success">下载</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 客户留言 -->
+                <div class="tab-pane fade" id="messages" style="height: auto">
+                    <!--
+                    <h4>给我们留言</h4>
+                    <p style="margin-top: 30px">您好，我们的在线时间是周一至周五 8:30-19:00，周六 9:30-12:00 13:00-18:30，我们会在看到留言的第一时间进行回复， 如果有急事，请拨打 400-808-8103</p>
+                    -->
+                    <div class="features-section" style="height: auto">
+                        <section class="u-content">
+                            <div class="message-box">
+                                <h6 style="font-weight: bold;color: #777;margin-bottom: 10px">给我们留言</h6>
+                                <p class="text-left" style="font-size: 14px">您好，我们的在线时间是周一至周五 8:30-19:00，周六 9:30-12:00 13:00-18:30，我们会在看到留言的第一时间进行回复， 如果有急事，请拨打 400-808-8103</p>
+                                <div class="small-bar">&nbsp;</div>
+                                <form id="saveForm" name="saveForm" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" style="font-size: 15px;color: #4a4a4a;font-weight: bold">姓名</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" id="cust_name" name="cust_name" placeholder="您的姓名">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">电子邮箱</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" id="email" name="email" placeholder="您的邮箱">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">联系方式</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" id="phone" name="phone" placeholder="您的联系方式">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">公司名称</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" id="company_name" name="company_name" placeholder="您的公司名称">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">留言标题</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" id="topic" name="topic" placeholder="请输入您的留言标题">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">留言内容</label>
+                                        <div class="col-sm-7">
+                                            <textarea class="form-control" id="content" name="content" rows="6" placeholder="请输入您的留言内容"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <button type="button"  onclick="saveFeedback()" class="btn btn-success">提交</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr/>
+<%include include/footer.html %>
+
+<script type="text/javascript">
+
+    var ur =location.href;
+    var str=ur.substring(ur.length-1,ur.length);
+
+    $("#head_profile").removeClass("active");
+    $("#head_home").removeClass("active");
+    $("#head_message").removeClass("active");
+    $("#home").removeClass("tab-pane fade show active").addClass("tab-pane fade");
+    $("#profile").removeClass("tab-pane fade show active").addClass("tab-pane fade");
+    $("#messages").removeClass("tab-pane fade show active").addClass("tab-pane fade");
+
+    if(str=="1"){
+        $("#head_home").addClass("active");
+        $("#home").addClass("show active");
+    }
+    if(str=="2"){
+        $("#head_profile").addClass("active");
+        $("#profile").addClass("show active");
+    }
+    if(str=="3"){
+        $("#head_message").addClass("active");
+        $("#messages").addClass("show active");
+    }
+
+    function clickTab(type) {
+        $("#head_home").removeClass("active");
+        $("#head_profile").removeClass("active");
+        $("#head_message").removeClass("active");
+        $("#home").removeClass("tab-pane fade show active").addClass("tab-pane fade");
+        $("#profile").removeClass("tab-pane fade show active").addClass("tab-pane fade");
+        $("#messages").removeClass("tab-pane fade show active").addClass("tab-pane fade");
+        if(str=="1"){
+            $("#head_home").addClass("active");
+            $("#home").addClass("show active");
+        }
+        if(str=="2"){
+            $("#head_profile").addClass("active");
+            $("#profile").addClass("show active");
+        }
+        if(str=="3"){
+            $("#head_message").addClass("active");
+            $("#messages").addClass("show active");
+        }
+    }
+
+
+    function navPage(flag) {
+        alert("非常抱歉！该功能目前正在维护，不便之处，敬请谅解！");
+
+        // var page_num = $('#page_num').val(),
+        //     page_count = $('#page_count').val(),
+        //     need_submit = true;
+        // page_num = parseInt(page_num);
+        // if (flag == 'first') {
+        //     if (page_num != 1) page_num = 1;
+        //     else need_submit = false;
+        // } else if (flag == 'prev') {
+        //     if (page_num>1) page_num=page_num-1;
+        //     else need_submit = false;
+        // } else if (flag == 'next') {
+        //     if (page_num<page_count) page_num=page_num+1;
+        //     else need_submit = false;
+        // } else if (flag == 'last') {
+        //     if (page_num != page_count) page_num = page_count;
+        //     else need_submit = false;
+        // }
+        //
+        // if (need_submit) {
+        //     $('#page_num').val(page_num);
+        //     $('#pageForm').submit();
+        // }
+    }
+
+
+    //表单提交
+    var hide = false;
+    function toJsonStr(params){
+        var str = "{";
+        var i=0;
+        for(var x in params){
+            if(i > 0){
+                str = str + ",";
+            }
+            str = str + '"' + x + '"' + ':' + '"' + params[x] + '"';
+            i++;
+        }
+        str = str + "}";
+        return str;
+    }
+    function saveFeedback() {
+
+        alert("非常抱歉！该功能目前正在维护，不便之处，敬请谅解！");
+
+        //var saveForm = document.forms["saveForm"];
+        //var params = {
+        //    cust_name: saveForm[0].value,
+        //    email: saveForm[1].value,
+        //    phone: saveForm[2].value,
+        //    company_name: saveForm[3].value,
+        //    topic: saveForm[4].value,
+        //    content: saveForm[5].value
+        //};
+        //if (!params['phone'] || !params['content']) {
+        //    return alert("请至少填写联系方式和内容信息。");
+        //}
+
+        //$.post('http://www.app365.com/service/api.jsp', {fun: 'saveFeedback', params: toJsonStr(params)},
+        //    function (data, textStatus) {
+        //        if (data.status != 'Success') {
+        //            return alert("保存失败！");
+        //        } else {
+        //            alert("您的留言已提交，客服将会尽快回复。");
+        //            document.forms["saveForm"].submit();
+        //        }
+        //   }, "json");
+    }
+
+
+
+</script>
+
+
+</body>
+</html>

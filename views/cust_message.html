@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+    <title>服务支持</title>
+    <%include include/head_res.html %>
+</head>
+<body>
+<%include include/top_nav.html %>
+
+<div class="features-tabs-section">
+    <div class="container">
+            <div class="tab-content" style="height: auto;">
+                <!-- 客户留言 -->
+                <div class="tab-pane fade show active" id="messages" style="height: auto;">
+                    <div style="height: auto;margin-top: 50px">
+                        <section class="u-content">
+                            <div class="message-box">
+                                <h4 class="text-left">给我们留言</h4>
+                                <p class="text-left" style="font-size: 14px">您好，我们的在线时间是周一至周五 8:30-19:00，周六 9:30-12:00 13:00-18:30，我们会在看到留言的第一时间进行回复， 如果有急事，请拨打 400-7566-365</p>
+                                <div class="small-bar">&nbsp;</div>
+                                <form id="saveForm" name="saveForm" class="form-horizontal">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label" style="font-size: 15px;color: #4a4a4a;font-weight: bold">姓名</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" id="cust_name" name="cust_name" placeholder="您的姓名">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">电子邮箱</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" id="email" name="email" placeholder="您的邮箱">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">联系方式</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" id="phone" name="phone" placeholder="您的联系方式">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">公司名称</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" id="company_name" name="company_name" placeholder="您的公司名称">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">留言标题</label>
+                                        <div class="col-sm-4">
+                                            <input type="text" class="form-control" id="topic" name="topic" placeholder="请输入您的留言标题">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">留言内容</label>
+                                        <div class="col-sm-7">
+                                            <textarea class="form-control" id="content" name="content" rows="6" placeholder="请输入您的留言内容"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <button type="button"  onclick="saveFeedback()" class="btn btn-success">提交</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<hr/>
+<%include include/footer.html %>
+
+<script type="text/javascript">
+
+    //表单提交
+    var hide = false;
+    function toJsonStr(params){
+        var str = "{";
+        var i=0;
+        for(var x in params){
+            if(i > 0){
+                str = str + ",";
+            }
+            str = str + '"' + x + '"' + ':' + '"' + params[x] + '"';
+            i++;
+        }
+        str = str + "}";
+        return str;
+    }
+    function saveFeedback() {
+
+        var saveForm = document.forms["saveForm"];
+        var params = {
+           cust_name: saveForm[0].value,
+           email: saveForm[1].value,
+           phone: saveForm[2].value,
+           company_name: saveForm[3].value,
+           topic: saveForm[4].value,
+           content: saveForm[5].value
+        };
+        if (!params['phone'] || !params['content']) {
+           return alert("请至少填写联系方式和内容信息。");
+        }
+
+        $.post('/bizweb/magic/api/feedback.jsp', {fun: 'saveFeedback', params: toJsonStr(params)},
+           function (data, textStatus) {
+               if (data.status != 'Success') {
+                   return alert("保存失败！");
+               } else {
+                   alert("您的留言已提交，客服将会尽快回复。");
+                   document.forms["saveForm"].submit();
+               }
+          }, "json");
+    }
+
+</script>
+
+
+</body>
+</html>

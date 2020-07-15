@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<head xmlns="http://www.w3.org/1999/html">
+    <title>跟踪-运单跟踪-车次跟踪-GPS跟踪-APP365第三方物流系统</title>
+    <%include ../include/head_res.html %>
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/assets/css/docs.min.css" rel="stylesheet"/>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-146052-10', 'getbootstrap.com');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body>
+<%include ../include/top_nav.html %>
+
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+                </button>
+            </form>
+
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_start.html">
+                        开始使用
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_order.html">
+                        订单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_dispatch.html">
+                        车辆调度
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_track.html">
+                        跟踪
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_return.html">
+                        回单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_finance_01.html">
+                        财务管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_abnormal.html">
+                        异常件
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_analysis.html">
+                        经营分析
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_query.html">
+                        查询
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_service.html">
+                        客服
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                        基础资料
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#one">运单跟踪</a></li>
+                <li class="toc-entry toc-h2"><a href="#two">车次跟踪</a></li>
+                <li class="toc-entry toc-h2"><a href="#three">GPS跟踪</a></li>
+            </ul>
+        </div>
+
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" role="main">
+            <h4 id="one" style="margin-top: 30px" >
+                运单跟踪
+            </h4>
+            <p>
+                </br>1、运单跟踪即跟踪运单的运行状况。第三方物流公司在货物的配载主要采用整车配载和中转外包的方式，所以运单的运行状况需要物流公司的客服人员在系统后台进行更新。这也是第三方物流公司服务客户的重要部分；
+                </br></br>2、运单跟踪的主要功能包括：登记运单的跟踪信息；进行签收操作；登记运单异常信息；给客户发送短信；导出客户跟踪记录。
+                </br></br>3、发货单位可为客户本公司，也可以是客户下属的公司或个人。如客户A公司，他的下属有A1、A2、A3三个仓库或分公司，A公司是物流公司的客户，那么A公司发货的时候，可能是从A1、A2、A3仓库或分公司提货发出，所以，物流公司填写运单的时候，则在客户填写A公司，发货单位填写A1、A2或A3；
+
+                </br></br>4、系统将根据要求到货时间、签收时间将运单分颜色显示。
+                </br>&#12288 A、“签收时间”大于“预计到货时间”，运单将显示为红色。即为延迟到货
+                </br>&#12288 B、预计到货时间为今天，运单将显示为绿色。提醒客服人员注意跟进
+                </br>&#12288 C、其他情况正常显示
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/track_01.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br>5、运单的跟踪信息可以新增、修改和删除，在跟踪信息列表中的【内部信息】，选择“否”则表示跟踪信息可以在物流公司的网站的跟踪信息中显示，如选择“是”则表示跟踪信息只是内部信息，在物流公司网站的跟踪信息中不会显示；
+                </br></br>6、客户的运单的跟踪记录可以引出Excel表格；
+            </p>
+
+            <div class="image_div">
+                <img src="/images/product_manuals/track_02.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br>7、运单的其他信息统一在跟踪功能里面可以查看，如：运单的外发情况，费用情况，交接情况，异常问题，所有附件等等。
+            </p>
+
+            <div class="image_div">
+                <img src="/images/product_manuals/track_03.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br>8、客户签收，必须要货物到达运单的目的地之后，收货客户自行提货或送货上门都需要进行签收的操作。
+            </p>
+
+            <div class="image_div">
+                <img src="/images/product_manuals/track_04.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br>9、问题件的登记是货物在运送的过程中有损坏等异常情况的时候，登记以便于物流公司及时的进行处理问题。
+                </br></br>10、	在对话框中提示有跟踪记录是否为公开，登记异常件，运单的状态会同时更新为异常。异常件的处理具体在下一章节【异常件】中讲解。
+            </p>
+
+            <div class="image_div">
+                <img src="/images/product_manuals/track_05.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="two" style="margin-bottom: 40px;margin-top: 50px" >
+                车次跟踪
+            </h4>
+            <p>
+                1、车次跟踪在途管理是管理车辆在途情况，主要是指在途车辆跟踪，运单的在途管理在运单跟踪功能模块中，在列表里面可以查看整车的发车情况和车辆的配载货物明细情况。
+                </br></br>
+                <strong style="color: red">2、车次跟踪里面反馈的信息全部是通过司机APP实时上传的当前状态，如：上传操作的时间，地点位置是系统自动获取的，司机是不能修改的，车辆状态和图片是实时上传；</strong>
+                </br></br>
+                3、列表里面可以查询预警跟踪的车辆，以便于及时提醒公司客服跟踪车辆的实时状况
+                </br></br>
+                4、车辆到达之后，可以对货物进行收货确认以及异常件登记，收货确认之后，运单同时也会被签收，登记的异常件自动进入异常件管理功能里面；
+                </br></br>
+                5、在途报告：查看车次在司机在途报告车次情况；
+                </br></br>
+                6、状态列表：显示车次在途的所有状态，及显示车辆到达站点以及实时状态；
+                </br></br>
+                7、附件：查看本次车次，司机在在途所上传的图片。
+                </br></br>
+
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/track_06.png" class="img-fluid" alt="feature1" />
+            </div>
+
+
+            <h4 id="three" style="margin-bottom: 40px;margin-top: 50px" >
+                GPS跟踪
+            </h4>
+            <p>
+                1、跟踪某个GPS设备的运行轨迹。此功能需结合GPS设备使用。
+                </br></br>
+                2、跟踪设备的GPS位置信息。根据GPS设备号或者SIM卡号查询设备的GPS信息
+                </br></br>
+                3、查询设备GPS信息
+                </br>&#12288 A、进入设备GPS跟踪页面，在查询区域输入设备号或者SIM卡号，点击“查询”按钮查询设备GPS信息
+                </br>&#12288 B、左侧列表上方将会显示最新的GPS信息，下方将会显示查询到和该设备有关的车辆和小件员信息
+                </br>&#12288 C、地图上将会显示查询到的最新位置信息点
+                </br></br>
+                4、回放设备的运行轨迹
+                </br>&#12288 A、进入设备GPS跟踪页面
+                </br>&#12288 B、在查询区域输入设备号或者SIM卡号，设置GPS时间为需要跟踪的时间段，点击“轨迹回放”按钮回放设备的运行轨迹
+                </br></br>
+
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/track_07.png" class="img-fluid" alt="feature1" />
+            </div>
+
+
+        </main>
+    </div>
+</div>
+
+<hr>
+<%include ../include/footer.html %>
+</body>
+
+
+</html>

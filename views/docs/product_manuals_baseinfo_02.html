@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<head xmlns="http://www.w3.org/1999/html">
+    <title>商品设置-APP365第三方物流系统</title>
+    <%include ../include/head_res.html %>
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/assets/css/docs.min.css" rel="stylesheet"/>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-146052-10', 'getbootstrap.com');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body>
+<%include ../include/top_nav.html %>
+
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+                </button>
+            </form>
+
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_start.html">
+                        开始使用
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_order.html">
+                        订单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_dispatch.html">
+                        车辆调度
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_track.html">
+                        跟踪
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_return.html">
+                        回单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_finance_01.html">
+                        财务管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_abnormal.html">
+                        异常件
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_analysis.html">
+                        经营分析
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_query.html">
+                        查询
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_service.html">
+                        客服
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                        基础资料
+                    </a>
+                    <ul style="list-style: none;font-size: 15px">
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                            1、人与组织
+                        </a></li>
+                        <li><a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_baseinfo_02.html">
+                            2、商品设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_03.html">
+                            3、运输设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_04.html">
+                            4、运价管理</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_05.html">
+                            5、财务设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_06.html">
+                            6、系统设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_07.html">
+                            7、网站维护</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_08.html">
+                            8、工具及维护</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#one">仓库仓位</a></li>
+                <li class="toc-entry toc-h2"><a href="#two">计量单位</a></li>
+                <li class="toc-entry toc-h2"><a href="#three">商品资料</a></li>
+            </ul>
+        </div>
+
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" role="main">
+
+            <h4 style="margin-bottom: 40px;margin-top: 30px" >
+                商品设置
+            </h4>
+            <p>
+                <strong id="one">仓库仓位</strong></br></br>
+                1、维护仓库仓位资料主要是用于仓库管理中使用，APP365系统可进行仓库管理和配送一体化的业务流程管理，如仅是配送业务，则不用维护仓库资料；
+                </br></br>
+                2、仓库仓位是在系统里面维护公司仓库和仓库里面的每一个储位资料，便于在出入库时准确出入库的操作。在仓库中增加仓位属性，同时进行仓位管理，以完善仓库的基本信息，提高仓库库存管理质量；
+                </br></br>
+                3、操作步骤：基础资料→仓库仓位→新增仓库→新增库区→新增库位
+                </br></br>
+                4、新增仓库的时候，仓库的编码根据公司的实际需求来填写，仓库的类型选填即可；
+                </br></br>
+                5、新增库区的时候，上级库区查找选择上级仓库即可。
+                </br></br>
+                6、新增仓库库位的时候，可以打印库位的条码，贴在库位的位置上面，便于扫描商品上架，对应库位的操作。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_27.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p></br>
+                <strong id="two">计量单位</strong></br></br>
+                1、计量单位是在仓库系统里面选择商品计量的单位，在计量单位功能里面点击引入计量单位即可。
+                </br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_28.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p></br>
+                <strong id="three">商品资料</strong></br></br>
+                1、管理公司的商品信息。商品信息由客户信息、商品类别、商品资料组成。商品信息必须从属于某个客户。
+                </br></br>
+                2、增加的商品资料必须对应客户，如果新增商品资料的时候，没有选择商品的所属客户，那么增加的商品资料讲无法使用；
+                </br></br>
+                3、针对三方系统，对应客户增加商品资料以后，在运单录入填写商品明细的时候，可以点新增选择客户的商品资料。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_29.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                </br>&#12288 1)、新增商品类别(商品类别将在商品信息中使用)
+                </br>&#12288 A、操作步骤：进入商品管理页面。在商品类别页签内，点击“新增”按钮，系统将弹出商品类别信息录入框，录入商品类别信息，点击保存按钮即可。
+                </br>&#12288 B、商品的类别可以进行修改，也可以进行删除商品类别。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_30.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                </br>&#12288 2)、新增商品资料
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_31.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                </br>&#12288 a、进入商品管理页面，切换到商品资料页签。
+                </br>&#12288 b、点击上方列表的“新增”按钮，将会弹出商品资料录入框，录入商品资料的详细信息，点击保存按钮即可；
+                </br>&#12288 c、商品资料信息可以修改，也可以删除；
+                </br>&#12288 d、在录入商品资料的时候，尽量录入完整，从而完善出入库数据的统计。
+                </br>&#12288 e、批次管理：勾选批次管理后，商品在出入库的时候，才能按照批次进出库的管理入库，出库；
+                </br>&#12288 f、保质期管理：保质期管理需要维护商品的保质期（保质期按照“天”为单位填写），在商品入库的时候，填写商品的生产日期，系统根据生产日期，和商品的保质期，计算商品的过期时间，保证商品库存及时提醒预警；
+                </br>&#12288 g、组合件管理：设置多个商品组合为一个商品或一个商品有多个配件的设置。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_32.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br>&#12288 h、商品关联客户：进入商品管理页面，切换到商品资料页签，选中商品记录，点击“关联客户”按钮，系统将会弹出关联客户信息弹出框，选中需要关联的客户，点击“确认”按钮确认关联即可；
+                </br>&#12288 i、指定商品配件：进入商品管理页面，切换到商品资料页签，选中商品资料记录，把下方列表切换到商品配件，点击商品配件列表中的“新增”连接，系统将会弹出配件新增弹出框。指定好配件信息，点击保存按钮保存即可。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_33.png" class="img-fluid" alt="feature1" />
+            </div>
+
+        </main>
+    </div>
+</div>
+
+<hr>
+<%include ../include/footer.html %>
+</body>
+
+
+</html>

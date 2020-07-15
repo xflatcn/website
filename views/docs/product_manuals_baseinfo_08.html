@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<head xmlns="http://www.w3.org/1999/html">
+    <title>工具及维护-APP365第三方物流系统</title>
+    <%include ../include/head_res.html %>
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/assets/css/docs.min.css" rel="stylesheet"/>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-146052-10', 'getbootstrap.com');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body>
+<%include ../include/top_nav.html %>
+
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+                </button>
+            </form>
+
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_start.html">
+                        开始使用
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_order.html">
+                        订单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_dispatch.html">
+                        车辆调度
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_track.html">
+                        跟踪
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_return.html">
+                        回单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_finance_01.html">
+                        财务管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_abnormal.html">
+                        异常件
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_analysis.html">
+                        经营分析
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_query.html">
+                        查询
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_service.html">
+                        客服
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                        基础资料
+                    </a>
+                    <ul style="list-style: none;font-size: 15px">
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                            1、人与组织
+                        </a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_02.html">
+                            2、商品设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_03.html">
+                            3、运输设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_04.html">
+                            4、运价管理</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_05.html">
+                            5、财务设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_06.html">
+                            6、系统设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_07.html">
+                            7、网站维护</a></li>
+                        <li><a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_baseinfo_08.html">
+                            8、工具及维护</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#one">运单修改</a></li>
+                <li class="toc-entry toc-h2"><a href="#two">Excel导入模板设计 </a></li>
+                <li class="toc-entry toc-h2"><a href="#three">Excel文件导入 </a></li>
+                <li class="toc-entry toc-h2"><a href="#four">打印模板管理 </a></li>
+                <li class="toc-entry toc-h2"><a href="#five">短信管理</a></li>
+            </ul>
+        </div>
+
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" role="main">
+
+            <h4 id="nine" style="margin-bottom: 40px;margin-top: 30px" >
+                工具
+            </h4>
+
+            <p>
+                <strong id="one">运单修改</strong>
+                </br></br>运单修改功能主要是针对运单已经发出的运单进行修改，一般情况下，运单在录入保存时可以进行修改，保存下达之后运单就不允许在进行修改。当运单状态为【新建】的情况下，运单的信息可以进行修改；当运单状态为【已下达】的情况下，运单信息不允许进行修改，如果需要进行修改，需要有【反下达】权限的才能进行修改；当运单状态为【在途】或【在途】之后的状态，只要运单费用没有结算，需要修改运单的信息，就只有通过工具里面的运单修改进行修改运单信息。
+                </br></br>1、运单修改分为修改网点收货单和修改厂商委托单两种，在第三方系统里面，我们主要讲解修改厂商委托单的操作。
+                </br></br>2、运单修改有单独的权限管理，一般公司操作只将此权限授予给公司的管理人员进行操作；
+                </br></br>3、操作步骤：打开运单对应的修改功能→输入运单号→点击查询→修改运单信息→保存
+
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_57.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                <strong>Excel文件导入</strong>
+                </br></br> Excel文件导入主要是导入公司的运单、商品资料、客户资料，减少公司对大量数据的操作；导入分为设置导入模板和Excel文件导入两个步骤。
+                </br></br>Excel文件导入模板或导入，都必须要求上传的excel表格版本为97-2003版本的excel表格。
+                </br></br>
+                <strong id="two">Excel导入模板设计</strong>
+                </br></br>1、导入模板的类型分为：运单模板、运价模板、商品资料模板、客户资料模板等多种模板类型；
+                </br></br>2、在设置模板的时候，需要将导入Excel表格字段和系统的字段进行对应，系统支持Excel顺序匹配字段；
+                </br></br>3、在设置模板的时候，对应关系表中，【不能为空】项必须选择一项不能为空；
+                </br></br>4、对应字段的顺序必须正确，不能对应关系乱，一但出现对应关系混乱，就会导致导入Excel表格失败。
+                </br></br>5、操作流程：进入Excel导入模板设计→填写模板的名称/模板类型→上传模板Excel表格→点击刷新，弹出表格字段→确定字段对应关系→选择不能为空项→保存。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_58.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                <strong id="three">Excel文件导入</strong>
+                </br></br>1、Excel文件导入是在设计好导入模板之后进行的导入工作；
+                </br></br>2、Excel文件导入操作流程：进入Excel文件导入功能→点击上传文件→选择导入模板/导入记录→选择导入的文件→确认上传→进入数据处理的界面→选择导入记录，进入处理数据的弹出框→确定。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_59.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                </br></br>3、如需处理数据转为运单，则需要选择运单所属客户的名字和运单的类型和必要的信息；如处理数据转为商品资料，则需要选择商品资料所属的客户等，此处主要介绍导入运单的方法。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_60.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p> </br></br>
+                <strong id="four">打印模板管理</strong>
+                </br></br> 打印模板管理是设置打印的模板，APP365物流系统支持自主设计打印的模板，打印模板分为空白纸打印模板和已经印刷好的运单进行套打模板两种，系统设置了几种参考模板，可以选中复制之后进行使用；
+                </br></br>详细的模板设置及制作，请参考一下步骤：</br>
+                <strong>打印模板：</strong>
+                物流公司打印运单和标签之前，根据物流的公司的需求选择一种模板，物流公司也可以根据自己印刷的运单进行模板调整。在使用模板的时候，先选择一种模板，进行复制就可以使用了；
+                <strong>操作步骤：</strong>
+                在模板管理列表里面选中一种模板→点击上方模板复制。
+                <strong>模板设计：</strong>
+                模板的设计分为运单模板设计，标签模板设计，设计的模板分为两种，一种是已经印刷好的运单进行套打的设计（如图所示一），第二种是完全空白运单模板设计（如图所示二）；
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_61.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_62.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>第一，已经印刷好的运单进行套打的运单模板设计：</strong>
+                </br></br>1、设计套打运单模板的时候，首先要要将印刷的运单扫描之后，将图片切下来，处理图片的大小尺寸为运单的实际大小的尺寸，图片的像素为96；
+                </br></br>2、点击【设置】→【打印模板】（模板管理）→【模板设计】，进入模板设计的功能界面。填写设计模板的名称，在【模板类型】的位置选择运单模板，填写模板的宽和高度，填写的宽和高度为运单的实际宽和高度尺寸，单位为毫米；【默认字号】为打印的字号大小，为15，自己在设计的时候根据情况进行修改打印字号的大小；
+                </br></br>3、在指定背景图片位置【选择文件】，将已经处理好的图片上传到系统里面，进行模板的处理；
+                </br></br>4、在【可选字段】里面选择需要的字段内容，点击添加到【已选字段】里面，同时在效果预览图中的左上角出现，选中的字段在效果图中字体变为红色，然后通过坐标X轴和Y轴调整字段的位置，X轴为左右移动，Y轴为上下移动；
+                </br></br>5、在调整字段位置的时候，可以通过快捷键来迅速确定调整位置。快捷键的方法：在已选字段里面选中字段，使其在效果图中选中字段变为红色，然后按住ctrl键，鼠标左点击确定坐标位置；
+                </br></br>6、套打的运单模板在打印的时候，和运单字段的位置，打印机的设置，打印机右侧的标尺有关，所以在调整位置的时候，可以通过模板的【偏移】来调整整体移动，使其位置正确。如：X轴为-3，那么模板就整体往做移动3毫米，X轴为5，模板就整体向右移动5毫米，上下移动同样调整Y轴来实现。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_63.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>第二，完全空白运单模板设计：</strong>
+                </br></br>1、点击【设置】→【打印模板】（模板管理）→【模板设计】，进入模板设计的功能界面。填写设计的模板名称，在【模板类型】的位置选择运单模板，填写模板的宽和高度，填写的宽和高度为空白运单的整体宽和高度尺寸，单位为毫米；【默认字号】为打印的字号大小，为15，自己在设计的时候根据情况进行修改打印字号的大小；
+                </br></br>2、点击右侧【新建线条】，根据空白纸的尺寸（除去带孔的边缘，空白纸实际打印的尺寸，一般常用的241*280三联二等分的运单打印纸，实际打印尺寸为214*140）新建表格，每一条直线的一端由X轴和Y轴交叉的点组成，只需要确定直线两端两个点的位置，即可新建一条直线。
+                </br></br>3、表格制好后，根据表格填入需要打印的内容，点击【新建文本】，填写需要打印的固定字段，如：发货人，收货人等。在新增固定文本的时候，新增的字段名称就是固定字段的文本。文本增加好后，根据X轴和Y轴将新增的文本调整到所需要打印的位置，同样可以使用快捷键（选中调整的字段，按住ctrl键，在填写位置左击鼠标即可）进行调整；
+                </br></br>4、在【可选字段】里面选择根据内容的活动字段，如：收货人名字，收货人电话号码等，然后点击添加到【已选字段】里面，选中已选字段，根据X轴和Y轴将已选字段调整到所需要打印的位置，同样可以使用快捷键（选中调整的字段，按住ctrl键，在填写位置左击鼠标即可）进行调整；
+                </br></br>5、在新增注意事项文本的时候，新增模板字段不支持自动换行，需要手动调整，一般字号为14的时候，和效果图中字体大小一样。
+                </br></br>6、当模板需要整体移动的时候，可以通过模板的【偏移】来调整整体移动，使其位置正确。如：X轴为-3，那么模板就整体往做移动3毫米，X轴为5，模板就整体向右移动5毫米，上下移动同样调整Y轴来实现。
+
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_64.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong id="five">短信管理</strong>
+                </br></br>短信管理是管理公司的短信功能，主要内容有：管理编辑短信模板，查看短信发送历史，编辑自动发送短信的计划；此处主要介绍设置短信模板的方法和步骤。
+                </br></br>1、发送短信可以在功能界面发送短信，也可以在短信功能里面发送短信，在发送短信之前，必须要设置公司特有的短信模板；
+                </br></br>2、系统里面初始有对应的相关模板，系统的模板也可以进行修改；
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_65.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                </br></br>3、修改模板时，需要注意系统里面的可用字段必须选择设置的字段，如：运单号等随运单的变化而变化的字段就必须选择系统设置的格式字段，其他的文字可以手工添加上去就行。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_66.png" class="img-fluid" alt="feature1" />
+            </div>
+        </main>
+    </div>
+</div>
+
+<hr>
+<%include ../include/footer.html %>
+</body>
+
+
+</html>

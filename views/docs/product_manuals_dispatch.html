@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<head xmlns="http://www.w3.org/1999/html">
+    <title>车辆调度-提货调度-干线派车-派车审核-装车发运-调度管理-中转外包-中转审核-送货中转-送货调度-APP365第三方物流系统</title>
+    <%include ../include/head_res.html %>
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/assets/css/docs.min.css" rel="stylesheet"/>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-146052-10', 'getbootstrap.com');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body>
+<%include ../include/top_nav.html %>
+
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+                </button>
+            </form>
+
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_start.html">
+                        开始使用
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_order.html">
+                        订单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a style="font-weight: bold"  class="bd-toc-link" href="/docs/product_manuals_dispatch.html">
+                        车辆调度
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_track.html">
+                        跟踪
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_return.html">
+                        回单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_finance_01.html">
+                        财务管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_abnormal.html">
+                        异常件
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_analysis.html">
+                        经营分析
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_query.html">
+                        查询
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_service.html">
+                        客服
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                        基础资料
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#one">提货调度</a></li>
+                <li class="toc-entry toc-h2"><a href="#two">干线派车</a></li>
+                <li class="toc-entry toc-h2"><a href="#three">派车审核</a></li>
+                <li class="toc-entry toc-h2"><a href="#four">装车发运</a></li>
+                <li class="toc-entry toc-h2"><a href="#five">调度管理</a></li>
+                <li class="toc-entry toc-h2"><a href="#six">中转外包</a></li>
+                <li class="toc-entry toc-h2"><a href="#seven">中转审核</a></li>
+                <li class="toc-entry toc-h2"><a href="#eight">送货中转</a></li>
+                <li class="toc-entry toc-h2"><a href="#nine">送货调度</a></li>
+            </ul>
+        </div>
+
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" role="main">
+            <h3 style="margin-bottom: 40px;margin-top: 30px" >
+                调度
+            </h3>
+            <p>
+                调度功能的主要内容包含提货调度、干线派车、派车审核、装车发运、调度管理、中转外包、中转审核、送货中转和送货调度的功能模块，该模块主要是物流公司调度员根据运单，进行提货、发货和送货而进行的发货业务操作。
+                </br></br>
+                <strong style="color: red">调度模块里面所有的业务都可以结合司机APP进行操作，跟踪司机，司机在途报告，司机签收，司机上传图片，车辆状态提报等等。</strong>
+                </br></br><strong style="font-weight: bold">提货流程：</strong>运单录入（<strong style="color: red">提货方式必须选择公司提货</strong>）->进入调度模块->提货调度->选单->点提货调度->填写提货信息及提货费用->保存->提货完成->入库（下达）
+                </br></br><strong style="font-weight: bold">整车调度的流程：</strong>运单录入（<strong style="color: red">提货方式必须选择提货直送</strong>）->选单调度派车（打印派车单）->对所派车辆进行派车审核（打印派工单）->审核通过的车辆进行装车发运（打印配载单和车辆合同）->在途跟踪车辆。
+                </br></br><strong style="font-weight: bold">中转运单的操作流程：</strong>运单录单（<strong style="color: red">提货方式选择客户送货到站、专线提货或公司提货</strong>）->选择运单进行中转（填写服务商信息，服务商单号，中转费）->保存->确认调度->中转审核（对修改中转信息进行审核，没有修改中转信息的就不用审核）->需要送货中转的进行送货中转操作。
+                    </br></br><strong style="font-weight: bold">送货调度操作流程：</strong>运单录入（<strong style="color: red">交货方式必须选择公司送货</strong>）->进入调度模块送货调度->选单->点送货调度->填写送货信息及送货费用->保存
+
+            </p>
+
+            <h4 id="one" style="margin-bottom: 40px;margin-top: 50px" >
+                提货调度
+            </h4>
+            <p>
+                提货调度是指进行公司派车提货的操作，提货操作主要针对运单的提货方式为：公司提货的运单。
+                </br></br>
+                针对提货方式为公司提货的情况，可以在系统参数里面设置为当需要公司提货的情况，必须要进行提货调度的操作；
+                </br></br>
+                <strong style="font-weight: bold">提货操作流程：</strong>进入调度模块->提货调度->选单->点提货调度->填写提货信息及提货费用->保存->提货完成->入库
+                </br></br>
+                <strong style="font-weight: bold">提货调度信息录入的时候，提货费用分摊：</strong>当选择分单录入的时候，需要在运单明细上面录入提货费，财务结算则按照运单进行结算；如果分摊方式选择按照重量、体积、件数进行分摊的情况，财务结算则按照车次进行结算，系统自动将提货费分摊到每一单的成本里面。
+                </br></br>
+
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/dispatch_01.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="two" style="margin-bottom: 40px;margin-top: 50px" >
+                干线派车
+            </h4>
+            <p>
+                干线派车是在运单录单之后，对运单进行整车（包车）调度的操作；在调度派车的操作中，可以选择多单进行调度，意思就是可以一辆车配载多单。进行调度派车的运单在录单的时候，提货方式必须填写【提货直送】，否则运单不会进入到调度派车的列表里面。
+                </br></br>
+                干线派车的流程：调度派车（调度车辆）->派车审核（审核调度的车辆是否合格）->装车发运（现场装车，确定发车）->调度管理（跟踪车辆）
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/dispatch_02.png" class="img-fluid" alt="feature1" />
+            </div>
+            </br>
+            <p>
+                <strong>调度派车操作的重点事项：</strong>
+                </br></br>1、填写的起运地和目的地必须是车辆到达的目的地城市，如果需要系统计算维护好的车辆运费，则必须填写标准的地址信息；
+                </br></br>2、装货单位、装货地址、联系电话是车辆在起运地装货的单核和地址；
+                </br></br>3、派车时间指的是调度派车的时间，系统默认的是系统当前操作的时间；提货时间指的是车辆到达提货点进行装货的时间；到达时间是调度人员估计车辆到达目的地的时间；
+                </br></br>4、司机的运费可以再系统里面维护司机的运价，在调度派车的时候，选择司机的运价，系统则会自动算出整车司机的运费；同时也可以根据车辆计算车辆核定好的运费，从而解决复杂的司机费用；
+                </br></br>5、系统可以设置车辆从起运地到目的地的标准运费，从而给公司调度人员提供运费参考，操作点击预估运费，系统就可以算出设置的起运地到目的地的标准运费；
+                </br></br>6、调度派车操作步骤：进入调度派车功能列表->选择需要调度的运单->点击调度派车->填写车辆的目的地、装货单位、车辆信息等->核算司机运费->保存->打印派车单->确认派车
+                </br></br>7、车辆配载的信息在车辆还没有发车之前，可以进行删除配载运单和新增配载运单，也可以调整运单装车件数。
+                </br></br><strong style="color: red">8、在调度派车的时候，必须要选择成本分摊的方式，只要确定发车操作，系统自动将车次的运费成本按照分摊标准分摊到配载的运单上面去。</strong>
+                </br></br>
+                9、调度派车可以打印派车单，公司作为调度部门派车的依据。
+                </br></br>
+                10、历史的调度车辆可以在列表里面查看。
+                </br></br>
+            </p>
+
+            <div class="image_div">
+                <img src="/images/product_manuals/dispatch_03.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="three" style="margin-bottom: 40px;margin-top: 50px" >
+                派车审核
+            </h4>
+            <p>
+                派车审核主要是审核调度员所派车辆信息，审核的内容包含车辆的证照情况是否过期或合格、车辆的各种状况是否安全。
+                </br></br>
+                1、车辆审核通过了，才可以进行下一步的操作，如果审核没有通过，则不允许该车辆进行下一步的装车发运操作；
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/dispatch_04.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                </br></br>
+                2、审核车辆之后，可以打印派工单，司机可以用派工单到仓库里面找仓库管理员安排装货的操作。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/dispatch_05.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="four" style="margin-bottom: 40px;margin-top: 50px" >
+                装车发运
+            </h4>
+            <p>
+                装车发运是司机车辆审核通过之后，车辆到仓库装货发车的过程，在装车的时候，可以根据装车的实际情况，调整装车的运单及运单货物的数量调整，车辆装车完毕之后，确定发车，则表示货物已经发出，车辆在途了。
+                </br></br>
+                1、在确定发车之前可以打印配载清单和司机合同；
+                </br></br>
+                2、车辆在确定发车之后，车辆的信息和配载信息就不允许进行修改；
+                </br></br>
+                3、在配载发车之前，可以设定跟踪车辆的时间，设置之后，在在途管理功能里面可以查询那些车辆需要客服跟踪。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/dispatch_06.png" class="img-fluid" alt="feature1" />
+            </div>
+            </br>
+            <div class="image_div">
+                <img src="/images/product_manuals/dispatch_07.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="five" style="margin-bottom: 40px;margin-top: 50px" >
+                调度管理
+            </h4>
+            <p>
+                调度管理是管理车辆在途情况，主要是指在途车辆跟踪，运单的在途管理在运单跟踪功能模块中，在列表里面可以查看整车的发车情况和车辆的配载货物明细情况。
+                </br></br>
+                1、列表里面可以查询预警跟踪的车辆，以便于及时提醒公司客服跟踪车辆的实时状况
+                </br></br>
+                2、车辆到达之后，可以对货物进行收货确认以及异常件登记，收货确认之后，运单同时也会被签收，登记的异常件自动进入异常件管理功能里面；
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/dispatch_08.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="six" style="margin-bottom: 40px;margin-top: 50px" >
+                中转外包
+            </h4>
+            <p>
+                中转外包是物流公司将无法通过自身渠道送达目的地的货物转包给同行(服务商)来完成； 例如：A公司在深圳揽收了一件货物，目的地是贵阳，而A公司没有直达贵阳的专线，所以将该货物转包给B公司，由B公司将货物送到贵阳； 业务处理上，A公司将货物交给B公司，需要付给B公司“中转费”，B公司开具“托运单”给A公司，中转费的计算可以有多种方式：现付、到付、月结等；
+                </br></br>
+                <strong style="color: red">1、中转外包功能可以在维护服务商的时候，把服务商的服务网点以及网点的服务区域维护好之后，系统设置为自动中转。调度人员只需要对系统自动中转的信息审核即可；</strong>
+                </br></br>
+                2、运单录入时，运单的提货方式不是选择的提货直送，而是选择客户送货到站或公司提货的提货方式，此类运单一般选择中转操作业务，需要进行“中转外包”处理。
+                </br></br>
+                3、步骤：中转外包->选择需要中转的运单->点击中转进入中转对话框->填写服务商信息→保存。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/dispatch_09.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br>
+                4、在中转运单的列表条件查询框中，可以选择多个条件进行查询，
+                </br></br>
+                5、选择需要中转的运单，点击操作位置的【中转】，将会进入中转的对话框；
+                </br></br>
+                6、中转信息录入保存之后，进行确认调度的操作，只要状态为已调度的状态，则表示中转信息部允许在中转外包里面进行修改，如需修改，则需要在中转审核里面进行审核修改。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/dispatch_10.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br>
+                7、中转的日期系统默认的是当前的时间，但也可以自己更改；
+                </br></br>
+                8、在中转外包录入的对话框中，填入的是服务商的资料，货物清单列表中只需填写服务商的单号和中转的费用；
+                </br></br>
+                9、服务商是负责承运的物流公司，对于常用的服务商，可以在“设置--服务商”中事先建立服务商档案，然后从列表中选择； 对于未事先建立档案的服务商，可直接输入，保存中转信息时，会将其保存到服务商资料库中；
+                </br></br>
+                10、提货地的填写的是货物到达目的地的服务商的详细地址，以便通知客户到该地提货；可以从列表中选择，也可以重新输入一个新的地址；
+                </br></br>
+                11、联系人和联系方式填写的是服务商的联系人和联系方式；
+                </br></br>
+                12、结算方式是与服务商结算中转费的方式，包括现付、提付、月结、垫付几种结算方式：现付--与服务商交接时付款； 提付--到达目的地后，服务商收取客户运费，并从中扣取中转费；月结--与服务商按月结算中转费；
+                </br></br>
+                13、服务商的费用也可以再基础资料里面设置报价，从而系统选择报价方案进行自动计算服务商中转费；
+                </br></br>
+                14、交接方式是网点与服务商进行货物的交接的方式，包括：送货到服务商、服务商自提；
+                </br></br>
+                15、在中转的时候，如果运单的目的地是同一目的地或中转给同一服务商，可以一次进行批量中转；
+                </br></br>
+                16、批量中转的时候，服务商的单号和中转费则需要分别填写；
+                </br></br>
+            </p>
+
+            <div class="image_div">
+                <img src="/images/product_manuals/dispatch_11.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br>
+                17、当把中转信息填写完毕保存后，中转批次系统会自动生成，在查询时，可以选择中转的批次进行查询；
+                </br></br>
+                18、当批量中站时，系统会自动统计已中转的件数、运费及中转费；
+                </br></br>
+                19、中转后，运单的状态变为【中转处理】，在查询时，选择【已中转】查询，会查询出已经中转的运单。
+                </br></br>
+            </p>
+
+            <h4 id="seven" style="margin-bottom: 40px;margin-top: 50px" >
+                中转审核
+            </h4>
+            <p>
+                中转审核主要是审核中转信息是否符合公司的规定要求，在审核中转信息之前，可以对中转信息进行修改，一但审核通过之后，中转信息就不允许进行在修改了；
+                </br></br>
+                1、中转审核是单独的权限控制功能。
+                </br></br>
+                2、运单录入时，运单的提货方式不是选择的提货直送，而是选择客户送货到站或公司提货的提货方式，此类运单一般选择中转操作业务，需要进行“中转外包”处理。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/dispatch_12.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="eight" style="margin-bottom: 40px;margin-top: 50px" >
+                送货中转
+            </h4>
+            <p>
+                送货中转是针对中转外包的时候，公司跟服务商的货物交接方式为送货到服务商的情况下，进行的操作。
+                </br></br>
+                1、送货车辆可以一车配载多单进行送货中转；
+                </br></br>
+                2、司机的送货费可以再配载的时候选择奖送货费分摊到每一单上作为费用支出的核算；
+                </br></br>
+                2、<strong style="font-weight: bold"> 送货中转信息录入的时候，送货费用分摊：</strong>当选择分单录入的时候，需要在运单明细上面录入提货费，财务结算则按照运单进行结算；如果分摊方式选择按照重量、体积、件数进行分摊的情况，财务结算则按照车次进行结算，系统自动将送货费分摊到每一单的成本里面。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/dispatch_13.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="nine" style="margin-bottom: 40px;margin-top: 50px" >
+                送货调度
+            </h4>
+            <p>
+                1、送货调度是对运单进行二次中转外包进行调度（异地送货），此种业务的操作，适用于进行中转外包后，再次进行异地送货的操作。
+                </br></br>
+                2、送货调度：必须在录单的时候，交货方式选择公司送货的情况下，才能进行送货调度的操作；
+                </br></br>
+                <strong style="font-weight: bold">3、送货调度信息录入的时候，送货费用分摊：</strong>当选择分单录入的时候，需要在运单明细上面录入提货费，财务结算则按照运单进行结算；如果分摊方式选择按照重量、体积、件数进行分摊的情况，财务结算则按照车次进行结算，系统自动将送货费分摊到每一单的成本里面。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/dispatch_14.png" class="img-fluid" alt="feature1" />
+            </div>
+
+        </main>
+    </div>
+</div>
+
+<hr>
+<%include ../include/footer.html %>
+</body>
+
+
+</html>

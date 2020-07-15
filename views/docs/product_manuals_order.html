@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<head xmlns="http://www.w3.org/1999/html">
+    <title>订单管理-托运单录入-运单管理-客户网上下单-网上下单-APP365第三方物流系统</title>
+    <%include ../include/head_res.html %>
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/assets/css/docs.min.css" rel="stylesheet"/>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-146052-10', 'getbootstrap.com');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body>
+<%include ../include/top_nav.html %>
+
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+                </button>
+            </form>
+
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_start.html">
+                        开始使用
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_order.html">
+                        订单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_dispatch.html">
+                        车辆调度
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_track.html">
+                        跟踪
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_return.html">
+                        回单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_finance_01.html">
+                        财务管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_abnormal.html">
+                        异常件
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_analysis.html">
+                        经营分析
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_query.html">
+                        查询
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_service.html">
+                        客服
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                        基础资料
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#one">托运单录入</a></li>
+                <li class="toc-entry toc-h2"><a href="#two">运单管理</a></li>
+                <li class="toc-entry toc-h2"><a href="#three">客户网上下单</a></li>
+                <li class="toc-entry toc-h2"><a href="#four">订单导入</a></li>
+            </ul>
+        </div>
+
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" role="main">
+            <h4 style="margin-bottom: 30px;margin-top: 30px" >
+                订单管理
+            </h4>
+            <p>
+                1、APP365第三方系统已实现连接客户、服务商、司机、收货人，实现物流的全程透明。
+                </br></br>2、客户通过VIP账号登陆系统自助下单，打印标签，运单，自助审核订单，自助运单跟踪，查看自己运单详情，查看自己的对账单等等；
+                </br></br>3、APP365第三方系统完全开放接口对接ERP订单，实现订单直接从客户ERP系统推送到APP365系统直接生成运单；
+                </br></br>4、运输司机使用司机APP，操作运输任务接收、客户预约、取货、发车、在途报告、到达确认、签收操作、图片上传、GPS跟踪等，物流公司实时掌控车辆运输的动态，实时获取司机操作的时间节点和准备的定位位置；
+                </br></br>5、收货人可通过公司网站，客户APP，物流公司微信公众号实时查询运单进度；
+                </br></br>6、系统自动调度：APP365系统调度功能已实现系统自动调度，在系统维护调度规则后，运单下达，系统自动进行调度，减轻调度操作时间，系统自动优先分析调度，提高效率；
+                </br></br>7、系统的查看图片，回单管理，异常件管理，集成高拍仪设备，永久保存回单/异常件图片，查询统计方便灵活。
+                </br></br>8、业务流程图：
+            </p>
+            <div class="col-md-12 text-center">
+                <img src="/images/product_manuals/order_00.png" class="img-fluid" alt="feature1" />
+            </div></br>
+
+            <h4 id="one" style="margin-bottom: 30px;margin-top: 30px" >
+                托运单录入
+            </h4>
+
+            <p>
+                <strong style="font-weight: bold">录入订单信息内容包含：</strong>订单基本信息、运输要求、货物信息、服务信息、应收客户运费；
+                </br></br>
+                运单录入之后必须保存和下达操作，运单只有下达之后，才能进行后续的所有操作；同时打印运单和标签；
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/order_01.png" class="img-fluid" alt="feature1" />
+            </div></br>
+            <p>
+                <strong>运单录入需注意的事项：</strong>
+                </br></br>1、运单号可系统自动生成，也可手动填写运单号，只需要在系统参数里面自己设置即可；
+                </br></br>2、录单的时候，必须先填写客户名称；填写客户名称、发货单位、收货单位的时候可以直接输入，也可以查找系统已经维护的资料；当查找系统已经维护的客户资料和收发货单位时，可以输入客户和收发货单位的编码，系统根据编码，查出维护的资料；也可以输入一部分，系统模糊匹配查询资料，提高录单的效率；
+                </br></br>3、发货单位可为客户本公司，也可以是客户下属的公司或个人。如客户A公司，他的下属有A1、A2、A3三个仓库或分公司，A公司是物流公司的客户，那么A公司发货的时候，可能是从A1、A2、A3仓库或分公司提货发出，所以，物流公司填写运单的时候，则在客户填写A公司，发货单位填写A1、A2或A3；
+                </br></br>4、针对发货单位，相对应的收货单位也是可以在【收发货单位】资料中维护有的，直接查找选择即可。具体的操作如：在基础资料的收发货单位中维护的A1对应的收货单位为B公司（个人），填写完发货单位为A1了之后，在收货单位出直接查找，就会带出收货单位B信息；
+                </br></br>5、客户单号指的是客户在发货的时候，客户给收货方的货物单号；
+                </br></br>6、客户费用中包含了发货运单的全部费用，费用的结算的对象由系统根据结算的方式自动生成运单费用的结算对象；
+                </br></br>7、提货方式：是发货客户和物流公司间的货物交接方式。
+                </br>&#12288 A、【客户送货到站】 指的是发货客户将货物送到物流公司的站点。此种情况，不需要物流公司提货的操作；
+                </br>&#12288 B、【公司提货】 指的是需要物流公司派车到客户的仓库进行提货回物流公司的仓库的操作；
+                </br>&#12288 C、【提货直送】 指的是需要物流公司派车到客户的仓库提货后，直接将车辆所装的货物送给收货人进行签收的操作。一般此种情况都是整车的直送或叫包车直送；
+                </br>&#12288 D、【专线提货】 指的是物流公司已经将货物中转外包给专线服务商，于是委托专线服务商到发货客户的仓库提货到专线服务商的仓库在发货。此种情况，物流公司已经将运单通过中转外包的渠道进行发货；
+
+                </br></br>8、交货方式：是物流公司和收货人之间的货物交接方式。
+                </br>&#12288 A、【客户自提】 是指客户自己到物流公司的网点或外包服务商的网点取货，不需要物流公司送货的操作；
+                </br>&#12288 B、【公司送货】 是指货物到达目的地后，还需要物流公司重新找服务商进行送货操作。此种情况也叫需要异地送货调度；
+                </br>&#12288 C、【专线送货】 指的是货物到达专线服务商目的网点之后，专线服务商再进行送货的操作；
+                </br>&#12288 D、【提货直送】 指的是整车或包车直送，和提货方式的提货直送对应；
+
+                </br></br>9、所以提货方式和交货方式就包含物流公司从接单开始的业务收发货渠道，提货方式和交货方式的集中类型可以自由组合，具体怎么组合取决于物流公司的实际业务；
+                </br></br>10、当运单有回单的时候，必须要记录回单份数，只有记录回单份数之后，运单签收之后，自动进入回单管理功能进行回单的相关操作。
+                </br></br><strong style="font-weight: bold">11、紧急程度：</strong>当录单的时候，选择“紧急”的时候，在运单管理和运单跟踪功能里面，运单号右上角会有红色标识为【<strong style="color: red">急</strong>】，提醒该运单的紧急程度；
+                </br></br><strong style="color: red">12、运费自动计算：需要在报价管理里面维护客户报价，系统会根据对应的报价规则自动计算运费。</strong>
+            </p>
+
+            <h4 id="two" style="margin-bottom: 40px;margin-top: 50px" >
+                运单管理
+            </h4>
+            <p>
+                录单之后，运单可以在列表里面查看，导出等操作；公司操作人员可以通过不同的条件进行查询运单；
+                </br></br>
+                <strong style="font-weight: bold">删除运单：</strong>运单删除的前提条件是只有当运单的状态为【新增】的情况，才能删除运单，运单的其他任何状态都不能删除运单；<strong style="color: red">删除运单是有单独权限控制操作的</strong>；
+                </br></br>
+                <strong style="font-weight: bold">列表设置：</strong>运单管理的显示列表可以自己设置，而且可以每个账号设置自己的显示列，在设置的时候，可以把不需要显示的删除掉，不显示出来，也可以把显示排列在后的排列在前面显示；
+                </br></br>
+                <strong style="font-weight: bold">显示方式：</strong>运单管理功能的列表内容可以按照运单显示，也可以按照商品显示。按照运单显示是一个运单显示一条数据，按照商品显示是一个运单有多个商品明细的情况，根据商品明细条数显示数据；
+                </br></br>
+                    <strong style="font-weight: bold">运单还原：</strong>运单还原是将该运单的状态还原到【新增】的状态；在运单未结算的任何状态下，都可以进行运单还原的操作。<strong style="color: red">运单还原是有单独权限控制的</strong>。
+                </br></br>
+
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/order_02.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="three" style="margin-bottom: 40px;margin-top: 50px" >
+                客户（网上）订单
+            </h4>
+            <p>
+                客户订单是物流公司的客户通过物流公司的前台网站、VIP会员下单、微信公众号下单以及API接口推送的订单，物流公司在客户订单功能里面进行受理审核订单，变成公司正式的运单；
+                </br></br>
+                <strong style="font-weight: bold">数据来源为：</strong>客户网上下单、VIP会员下单、微信公众号下单以及API接口推送的订单。
+                </br></br>
+                列表分为会员订单和网上订单两个页签。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/order_03.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="four" style="margin-bottom: 40px;margin-top: 50px" >
+                订单导入
+            </h4>
+            <p>
+                订单导入是通过Excel表格，批量导入运单的操作。导入之前必选现在系统里面把导入运单的模板设置好；
+                </br></br>
+                <strong style="font-weight: bold">导入运单分为两步：</strong>一是上传Excel文件，二是将上传的数据转换为运单；上传的Excel表格版本必须为97-2003版本的Excel表格；
+                </br></br>
+                在导入运单的时候，必须选对正确的导入模板，如果模板选错了，导入的数据将会出现错误；
+                </br></br>
+                上传文件，系统会根据模板自动提取数据，此时可以对提取的数据进行校验，系统将把有问题的数据提取标识出来，以便于导入数据的正确性。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/order_04.png" class="img-fluid" alt="feature1" />
+            </div>
+
+        </main>
+    </div>
+</div>
+
+
+<!--
+<div class="st-container st-container--left-side">
+
+    <div class="st-pusher">
+        <div class="portfolio-item-showcase">
+            <div class="container">
+                <div class="project">
+                    <div class="row">
+                        <div class="col-md-2"  >
+                            <div class="details text-left">
+                                <nav class="nav-sidebar" >
+                                    <ul class="nav flex-column">
+                                        <li><a href="/product_manuals_order.html" class="nav-link active">订单</a></li>
+                                        <li><a href="/product_manuals_dispatch.html" class="nav-link">调度</a></li>
+                                        <li><a href="/product_manuals_track.html" class="nav-link">跟踪</a></li>
+                                        <li><a href="/product_manuals_return.html" class="nav-link">回单</a></li>
+                                        <li><a href="/product_manuals_finance.html" class="nav-link">财务</a></li>
+                                        <li><a href="/product_manuals_abnormal.html" class="nav-link">异常件</a></li>
+                                        <li><a href="/product_manuals_analysis.html" class="nav-link">经营分析</a></li>
+                                        <li><a href="/product_manuals_query.html" class="nav-link">查询</a></li>
+                                        <li><a href="/product_manuals_service.html" class="nav-link">客服</a></li>
+                                        <li><a href="/product_manuals_baseinfo.html" class="nav-link">基础资料</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8" style="padding-left: 30px;border-left: 1px solid red;border-right: 1px solid red;">
+                            <h4 id="one" class="text-center">
+                                托运单录入
+                            </h4>
+                            <p>
+                                录入订单信息内容包含：订单基本信息、运输要求、货物信息、服务信息、应收客户运费；
+                                </br></br>
+                                运单录入之后必须保存和下达操作，运单只有下达之后，才能进行后续的所有操作；同时打印运单和标签；
+                            </p>
+                            <p>
+                                <strong>运单录入需注意的事项：</strong>
+                                </br></br>1、运单号可系统自动生成，也可手动填写运单号，只需要在系统参数里面自己设置即可；
+                                </br></br>2、录单的时候，必须先填写客户名称；填写客户名称、发货单位、收货单位的时候可以直接输入，也可以查找系统已经维护的资料；当查找系统已经维护的客户资料和收发货单位时，可以输入客户和收发货单位的编码，系统根据编码，查出维护的资料；也可以输入一部分，系统模糊匹配查询资料，提高录单的效率；
+                                </br></br>3、发货单位可为客户本公司，也可以是客户下属的公司或个人。如客户A公司，他的下属有A1、A2、A3三个仓库或分公司，A公司是物流公司的客户，那么A公司发货的时候，可能是从A1、A2、A3仓库或分公司提货发出，所以，物流公司填写运单的时候，则在客户填写A公司，发货单位填写A1、A2或A3；
+                                </br></br>4、针对发货单位，相对应的收货单位也是可以在【收发货单位】资料中维护有的，直接查找选择即可。具体的操作如：在基础资料的收发货单位中维护的A1对应的收货单位为B公司（个人），填写完发货单位为A1了之后，在收货单位出直接查找，就会带出收货单位B信息；
+                                </br></br>5、客户单号指的是客户在发货的时候，客户给收货方的货物单号；
+                                </br></br>6、客户费用中包含了发货运单的全部费用，费用的结算的对象由系统根据结算的方式自动生成运单费用的结算对象；
+                                </br></br>7、提货方式：是发货客户和物流公司间的货物交接方式。
+                                </br>&#12288 A、【客户送货到站】 指的是发货客户将货物送到物流公司的站点。此种情况，不需要物流公司提货的操作；
+                                </br>&#12288 B、【公司提货】 指的是需要物流公司派车到客户的仓库进行提货回物流公司的仓库的操作；
+                                </br>&#12288 C、【提货直送】 指的是需要物流公司派车到客户的仓库提货后，直接将车辆所装的货物送给收货人进行签收的操作。一般此种情况都是整车的直送或叫包车直送；
+                                </br>&#12288 D、【专线提货】 指的是物流公司已经将货物中转外包给专线服务商，于是委托专线服务商到发货客户的仓库提货到专线服务商的仓库在发货。此种情况，物流公司已经将运单通过中转外包的渠道进行发货；
+
+                                </br></br>8、交货方式：是物流公司和收货人之间的货物交接方式。
+                                A、【客户自提】 是指客户自己到物流公司的网点或外包服务商的网点取货，不需要物流公司送货的操作；
+                                B、【公司送货】 是指货物到达目的地后，还需要物流公司重新找服务商进行送货操作。此种情况也叫需要异地送货调度；
+                                C、【专线送货】 指的是货物到达专线服务商目的网点之后，专线服务商再进行送货的操作；
+                                D、【提货直送】 指的是整车或包车直送，和提货方式的提货直送对应；
+                            </p>
+                            <div class="text-center">
+                            <img src="images/portfolioitem2.png" class="img-fluid" alt="portfolio3" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-2" >
+                            <div class="details text-left">
+                                <nav class="nav-sidebar">
+                                    <ul class="nav flex-column">
+                                        <li><a href="/product_manuals_order.html#one" class="nav-link active">托运单录入</a></li>
+                                        <li><a href="/product_manuals_order.html#two" class="nav-link">运单管理</a></li>
+                                        <li><a href="/product_manuals_order.html#three" class="nav-link">客户(网上)下单</a></li>
+                                        <li><a href="/product_manuals_order.html#four" class="nav-link">订单导入</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<hr>
+<%include ../include/footer.html %>
+</body>
+
+
+</html>

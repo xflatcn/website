@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<head xmlns="http://www.w3.org/1999/html">
+    <title>财务管理-APP365第三方物流系统</title>
+    <%include ../include/head_res.html %>
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/assets/css/docs.min.css" rel="stylesheet"/>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-146052-10', 'getbootstrap.com');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body>
+<%include ../include/top_nav.html %>
+
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+                </button>
+            </form>
+
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_start.html">
+                        开始使用
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_order.html">
+                        订单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_dispatch.html">
+                        车辆调度
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_track.html">
+                        跟踪
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_return.html">
+                        回单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_finance_01.html">
+                        财务管理
+                    </a>
+                    <ul style="list-style: none;font-size: 15px">
+                        <li><a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_finance_01.html">
+                            1、计费与对账
+                        </a></li>
+                        <li><a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_finance_02.html">
+                            2、开票与结算</a></li>
+                        <li><a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_finance_03.html">
+                            3、油卡管理</a></li>
+                        <li><a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_finance_04.html">
+                            4、财务查询</a></li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_abnormal.html">
+                        异常件
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_analysis.html">
+                        经营分析
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_query.html">
+                        查询
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_service.html">
+                        客服
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                        基础资料
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#one">运单收入</a></li>
+                <li class="toc-entry toc-h2"><a href="#two">运输支出</a></li>
+                <li class="toc-entry toc-h2"><a href="#three">费用录入</a></li>
+                <li class="toc-entry toc-h2"><a href="#four">费用对账</a></li>
+                <li class="toc-entry toc-h2"><a href="#five">客户对账</a></li>
+                <li class="toc-entry toc-h2"><a href="#six">运输对账(按单)</a></li>
+                <li class="toc-entry toc-h2"><a href="#seven">运输对账(按车)</a></li>
+                <li class="toc-entry toc-h2"><a href="#eight">账单管理</a></li>
+                <li class="toc-entry toc-h2"><a href="#nine">费用结算</a></li>
+                <li class="toc-entry toc-h2"><a href="#ten">收款结算</a></li>
+                <li class="toc-entry toc-h2"><a href="#eleven">付款结算</a></li>
+                <li class="toc-entry toc-h2"><a href="#twele">开票结算</a></li>
+                <li class="toc-entry toc-h2"><a href="#thirteen">提现/存现/转账</a></li>
+                <li class="toc-entry toc-h2"><a href="#fourteen">油卡管理</a></li>
+                <li class="toc-entry toc-h2"><a href="#fifteen">费用明细查询</a></li>
+                <li class="toc-entry toc-h2"><a href="#sixteen">结算明细查询</a></li>
+            </ul>
+        </div>
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" role="main">
+            <h4 id="one" style="margin-top: 30px" >
+                运单收入
+            </h4>
+            <p>
+                </br><strong style="color: red">1、运单收入主要是针对收入运费做财务费用的数据生成、新增费用、修改费用、删除费用、审核费用几个作用；
+                </strong></br></br><strong style="color: red">2、运单收入功能模块是财务确认公司业务运单收入的费用，运单生成的财务费用数据的状态分为以下几种财务状态：新增、已计费、已审核、已对账、已结算；
+                </strong></br></br><strong style="color: red">3、数据来源：业务在运单录入操作里面，录入运单收入的费用，和直接在运单收入里面新增费用项目；
+                </strong></br></br><strong style="color: red">4、计费生成：所有的运单必须进行计费生成之后，才能进行后续的财务操作，以及相关报表的统计，如果没有计费生成，则在财务模块，没有相应的财务数据。
+                </strong></br></br>5、计费确认：确认运单收入的费用，计费确认之后，运单财务状态更新为【已确认】，已确认的费用如果还需要更改，必须进行反确认之后，才能修改；
+                </br></br>6、计费审核：运单的费用可以进行审核和反审核费用，一但费用审核之后，费用在财务里面就不允许进行修改和增加；
+                </br></br>7、生成的财务费用在财务状态为【新增】的情况下，可以进行修改和删除，同时也可以点击新增，从而增加费用项。
+                </br></br>8、加补费用：是用于运单收入费用已经结算的情况下，该笔费用还有需要增加费用的情况下使用的，增加的费用类型为加补费用；
+                </br></br>9、列表设置：可以设置运单收入列表的显示；
+                </br></br>10、列表里面的运单数据可以点击导出，导出Excel表格。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_01.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br>11、所有的运单收入费用项目都在计费明细里面，把须增加的费用项目新增上去，新增加的费用项目就直接新增到运单下面，并且核算到运单的收入里面。
+                </br></br>12、新增是计费项目可以在财务设置里面设置和添加新的计费的字段，具体的操作方法见基础资料里面的【财务设置】功能。
+                </br></br>13、新增加的费用或修改过的费用，在计费明细里面都显示为蓝色。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_02.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="two" style="margin-bottom: 40px;margin-top: 50px" >
+                运输支出
+            </h4>
+            <p>
+                <strong style="color: red">1、运输支出主要是针对公司应付的成本支出费用做财务费用的数据生成、新增费用、修改费用、删除费用、审核费用几个作用；</strong>
+                </br></br><strong style="color: red">2、取消返厂是对已返厂的回单因为原因进行取消返厂的操作；</strong>
+                </br></br><strong style="color: red">3、回单收回之后，才能进行回单返厂的相关操作。</strong>
+                </br></br>4、运输支出模块式生成财务支出费用功能；支出的费用包含：发整车司机费用、提货/送货司机费用、中转外包费用；其中系统将<strong style="color: red">整车车次核算</strong>司机费用放在一个列表里面，剩下<strong style="color: red">分单核算的提货/送货/中转</strong>几种支出费用放在一个列表里面显示的。财务里面所有的业务支出都在运输支出功能模块里面。
+                </br></br>5、<strong style="color: red">车次核算</strong>是<strong style="color: red">按照车次显示</strong>应付给车次司机的费用；<strong style="color: red">分单核算</strong>是<strong style="color: red">按照运单显示</strong>应付给对应结算对象的费用；
+                </br></br><strong style="color: red">6、计费生成：提货调度的业务操作【提货完成】之后，系统自动生成运输支出的提货费数据；干线派车的业务操作【确认发车】之后，系统自动生成运输支出的司机运费数据；中转外包业务操作【中转审核】之后，系统自动生成运输支出的中转费数据；送货中转业务操作【确认送货】之后，系统自动生成运输支出的送货中转费数据；</strong>
+                </br></br>7、业务操作后，在对应的财务支出里面，如财务状态为新建的情况，需要对对应的费用进行操作，则需要点击【计费生成】，首先生成财务数据之后，才能进行财务的其他操作；<strong style="color: red">如果没有计费生成，则在财务模块，没有相应的财务数据。</strong>
+                </br></br><strong style="color: red">8、运输支出里面的财务确认功能是只要进行了财务确认的操作，整个运单关联的所有业务信息都不允许进行修改。</strong>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_03.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br>9、收入和支出的列表，可以进行列表自定义的设置，也可以根据需要，增加列表的数据的显示行数；
+                </br></br><strong style="color: red">10、运输支出的审核分为【财务审核】：按运单/车次进行审核和【计费审核】：按费用进行审核；【财务审核】：只要进行财务审核之后，整个业务的所有数据都不允许再次进行修改；【计费审核】：审核对应的单笔费用；计费审核之后，还可以继续在业务下面增加/修改其他的费用。 </strong>
+                </br></br><strong style="color: red">11、加补费用：是对于费用已经结算了的情况，需要再次在业务上面，增加费用的情况，使用加补费用；增加的加补费用类型为加补费用类。</strong>
+            </p>
+
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_04.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="three" style="margin-bottom: 40px;margin-top: 50px" >
+                费用录入
+            </h4>
+            <p>
+                费用录入是公司财务手工录入公司所有的收入或支出费用。该功能模块主要录入的是公司的日常管理费用、车辆管理费用等等，如：公司办公用品费用、管理费用、员工工资、车辆维护费等等，除了业务相关的费用，都可以在费用录入功能里面进行录入增加。
+                </br></br>1、列表里面会显示的是所有费用明细，包含系统生成的业务费用和手工录入的费用；
+                </br></br>2、费用录入列表里面显示费用的来源，分为手工录入和系统生成两种。手工录入的费用是“手工录入”，业务上面系统生成的财务数据为“系统生成”；
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_05.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="four" style="margin-bottom: 40px;margin-top: 50px" >
+                费用对账
+            </h4>
+            <p>
+                费用对账模块是把系统里面的应收应付费用按照费用项目的方式与客户/司机/服务商进行费用对账，系统选择一段时间一个结算对象的费用项目，导出对账单与客户进行对账，在导出对账单的时候，系统会生成对账单对应的对账编号，便于在下一步开票申请以及付款申请，结算的时候操作。
+                </br></br>1、费用对账单编号可以自己手动输入，也可以系统自动生成对账单编号，对账单编号可以在结算的时候，输入账单编号查找出账单编号包含的运单费用信息；
+                </br></br>2、对账单保存确认之后，可以讲对账单导出Excel表格。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_06.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="five" style="margin-bottom: 40px;margin-top: 50px" >
+                客户对账
+            </h4>
+            <p>
+                1、客户对账是物流公司与发货客户的对账，一般情况下是用于月结客户，把客户一个月或一段时间的运单与客户的对账单进行对比；
+                </br></br><strong style="color: red">2、客户对账是按照运单明细的方式进行对账；</strong>
+                </br></br>3、客户对账一般情况是在运单计费生成之后，进行的操作；
+                </br></br>4、客户对账可以将客户的对账单单号和金额导入到系统里面进行对比，系统自动将金额和运单都匹配的运单和不匹配的运单金额重点显示出来；
+                </br></br>5、在对账后系统会生成一个批次的对账单金额，对账单的金额可以批量进行结算。
+                </br></br>6、操作流程：选择需要对账的客户，查询出客户的运单及费用信息->选择运单点击开始对账->输入账单编号->保存->（导入客户的对账单，进行比对筛选出不匹配的运单进行调整）->导出对账单
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_07.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="six" style="margin-bottom: 40px;margin-top: 50px" >
+                运输对账(按单)
+            </h4>
+            <p>
+                1、运输对账（按单）是物流公司和公司的服务商按照运单的方式进行对账，操作的方法同客户对账
+                </br></br>2、运输对账一般情况是导出对账单和服务商进行对账；
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_15.png" class="img-fluid" alt="feature1" />
+            </div>
+
+
+            <h4 id="seven" style="margin-bottom: 40px;margin-top: 50px" >
+                运输对账(按车)
+            </h4>
+            <p>
+                1、司机对账是公司和运输司机的对账（司机含干线运输司机、提货司机、送货司机）
+                </br></br>2、操作步骤同服务商对账
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_16.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="eight" style="margin-bottom: 40px;margin-top: 50px" >
+                账单管理
+            </h4>
+            <p>
+                1、账单管理的操作有账单确认、客户确认、上报开票、付款申请几个操作；
+                </br></br>2、账单确认：是对已经对账的账单进行确认，确认之后，账单的状态更新为【已确认】；
+                </br></br>3、客户确认：是标记账单已经和客户确认，确认后，账单的状态更新为【客户已确认】
+                </br></br>4、上报开票：将账单上报进行开票申请，上级开票之后，则进行账单的结算。
+                </br></br>5、账号管理的流程：对账，生成账单账单确认客户确认上报开票开票确认账单开票账单结算
+
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_17.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="nine" style="margin-bottom: 40px;margin-top: 50px" >
+                费用结算
+            </h4>
+            <p>
+                费用结算是结算财务费用，费用结算一般是公司出纳操作的功能，在费用结算时，可以选择结算的账户，方便 管理公司的账户。
+                </br></br><strong style="color: red;">1、费用结算之后，每一笔结算的记录都会生成一个结算编号，后续可以通过结算编号查询结算记录；</strong>
+                </br></br>2、结算的时候，可以选择使用不同的查询条件进行查询运单或费用项目进行结算；
+                </br></br>3、已经对账的运单，可以输入对账单编号进行查询已经对账的运单，从而进行批量结算。
+                </br></br><strong style="color: red;">4、费用结算是针对费用项目进行结算，在结算的时候，可以将费用分次结算。</strong>
+                </br></br>5、费用结算操作流程：费用结算->选择需要结算的费用项目->点击结算按钮，进入结算界面->确认结算的金额->选择结算账户->保存（财务状态更新为结算中）->确认（财务状态更新为已结算）
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_18.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="ten" style="margin-bottom: 40px;margin-top: 50px" >
+                收款结算
+            </h4>
+            1、收款结算是结算收入费用，结算在运单录入的时候，应收客户费用；
+            </br></br>2、费用结算一般是公司出纳操作的功能，在费用结算时，可以选择结算的账户，方便管理公司的账户。
+            </br></br><strong style="color: red">3、费用结算之后，每一笔结算的记录都会生成一个结算编号，后续可以通过结算编号查询结算记录；
+            </br></br>4、收款结算是针对运单进行结算，在结算的时候，可以将运单收入费用分次结算。
+            </strong>
+            </br></br>5、已经对账的运单，可以输入对账单编号进行查询已经对账的运单，从而进行批量结算。
+            </br></br>6、收款结算操作流程：收款结算->选择需要结算的运单->点击结算按钮，进入结算界面->确认结算的金额->选择结算账户->保存（财务状态更新为结算中）->确认（财务状态更新为已结算）
+
+            <h4 id="eleven" style="margin-bottom: 40px;margin-top: 50px" >
+                付款结算
+            </h4>
+            <p>
+                1、付款结算为结算服务商、司机等所有的支出费用结算；
+                </br></br>2、付款结算业务支出有：干线派车业务费用、提货业务支出费用、送货和送货中转业务支出费用、中转外包业务支出费用和其他支出费用的结算；
+                </br></br>3、操作方法同收款结算。
+                </br></br>4、付款结算操作流程：付款结算->选择需要结算的运单或业务->点击结算按钮，进入结算界面->确认结算的金额->选择结算账户->保存（财务状态更新为结算中）->确认（财务状态更新为已结算）
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_19.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="twele" style="margin-bottom: 40px;margin-top: 50px" >
+                开票结算
+            </h4>
+            <p>
+                1、开票结算分为两部分：一是账单开票，二是开票结算；
+                </br></br>2、账单开票：必须是在账单已经上报开票的状态下，才能进行开票的操作；在开票的时候，可以选择开票的类型和开票项目等等；
+                </br></br>3、开票结算的时候，可以针对一张对账单开多张发票；开票的金额由运单的金额汇总自动带入开票金额。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_20.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                </br></br>4、开票结算列表内，需要操作确认开票和确认结算；只有确认开票之后，才能进行确认结算的操作；
+                </br></br>5、在确认开票的时候，可以高拍仪将发票图片上传到系统备案；
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_21.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="thirteen" style="margin-bottom: 40px;margin-top: 50px" >
+                提现/存现/转账
+            </h4>
+            <p>
+                提现/存现/转账是针对公司内部账号之间的账户账目金额的互转，只能针对公司账户的操作。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_22.png" class="img-fluid" alt="feature1" />
+            </div>
+
+
+            <h4 id="fourteen" style="margin-bottom: 40px;margin-top: 50px" >
+                油卡管理
+            </h4>
+            <p>
+                1、油卡管理提供油卡维护，油卡充值，油卡还卡登记，油卡消费记录的功能；
+                </br></br>2、油卡充值后，在调度派车的时候，可以选择将油卡借给司机使用，其中油卡的金额当做运费消费。
+                </br></br>3、在财务功能的更多里面点击操作。
+
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_23.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                <strong>油卡维护</strong>
+                </br></br>1、维护公司的油卡信息
+                </br></br>2、油卡的状态为新建，已充值，已借出，已归还几种状态，每一种状态都对应到系统的操作，几种状态轮回使用更新。状态【新建】为新维护的油卡；状态【已充值】为已经为油卡充值，油卡有余额的情况；状态【已借出】为油卡已经借给司机使用；状态【已归还】为司机已经将油卡归还给公司。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_24.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>油卡充值</strong>
+                </br></br>将新建和已归还的油卡进行充值，准备再次借出，且只有油卡状态为新建和已归还的情况下，才能进行油卡充值。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_25.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                <strong>油卡还卡</strong>
+                </br></br>1、油卡还卡是在油卡已经领用之后，进行还卡的操作；
+                </br></br>2、在还卡的时候，需要记录还卡的时间和还卡卡内余额的填写，保证油卡金额的正确。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_26.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>油卡消费记录 </strong>
+                </br></br>1、油卡消费是查询油卡的消费记录，包含油卡充值和消费的金额体现。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_27.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="fifteen" style="margin-bottom: 40px;margin-top: 50px" >
+                费用明细查询
+            </h4>
+            <p>
+               按照财务费用明细查询系统里面所有费用项目的明细。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_28.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="sixteen" style="margin-bottom: 40px;margin-top: 50px" >
+                结算明细查询
+            </h4>
+            <p>
+                查询已经结算的费用明细。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_29.png" class="img-fluid" alt="feature1" />
+            </div>
+
+        </main>
+    </div>
+</div>
+
+<hr>
+<%include ../include/footer.html %>
+</body>
+
+
+</html>

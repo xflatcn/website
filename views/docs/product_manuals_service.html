@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<head xmlns="http://www.w3.org/1999/html">
+    <title>客服-客户服务-客户查单-运价查询-客户留言处理-客户留言-签收查询-APP365第三方物流系统</title>
+    <%include ../include/head_res.html %>
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/assets/css/docs.min.css" rel="stylesheet"/>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-146052-10', 'getbootstrap.com');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body>
+<%include ../include/top_nav.html %>
+
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+                </button>
+            </form>
+
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_start.html">
+                        开始使用
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_order.html">
+                        订单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_dispatch.html">
+                        车辆调度
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_track.html">
+                        跟踪
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_return.html">
+                        回单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_finance_01.html">
+                        财务管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_abnormal.html">
+                        异常件
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_analysis.html">
+                        经营分析
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_query.html">
+                        查询
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_service.html">
+                        客服
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                        基础资料
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#one">客户查单</a></li>
+                <li class="toc-entry toc-h2"><a href="#two">运价查询</a></li>
+                <li class="toc-entry toc-h2"><a href="#three">客户留言处理</a></li>
+                <li class="toc-entry toc-h2"><a href="#four">签收查询</a></li>
+            </ul>
+        </div>
+
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" role="main">
+            <h4 id="one" style="margin-bottom: 40px;margin-top: 30px" >
+                客户查单
+            </h4>
+            <p>
+                1、同查询功能里面 的客户查单功能
+                </br></br>2、查询运单的跟踪记录，导出跟踪记录列表；其中导出【客户跟踪记录】功能将不显示内部跟踪信息。
+                </br></br>3、客户查单可以根据不同的条件进行查询，也可以查询一个客户在一段时间内所有的发货情况。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/service_01.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="two" style="margin-bottom: 40px;margin-top: 50px" >
+                运价查询
+            </h4>
+            <p>
+                1、查询公司的运价信息。包含所有的运价信息，也可以按客户名称查询给某个客户的运输价格或查询某个专线公司给公司的价格；
+                </br></br>2、运价的维护在基础资料的【报价管理】里面进行维护。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/service_02.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="three" style="margin-bottom: 40px;margin-top: 50px" >
+                客户留言处理
+            </h4>
+            <p>
+                1、客户留言处理时物流公司的客服处理公司网站上的客户留言。处理信息将显示在公司网站上；
+                </br></br>2、客服在回复留言的时候，如勾选【仅管理员可见】，则回复的内容就不在公司的网站上面显示。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/service_03.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="four" style="margin-bottom: 40px;margin-top: 50px" >
+                签收查询
+            </h4>
+            <p>
+                查询统计运单的签收明细（同查询功能的签收查询）。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/service_04.png" class="img-fluid" alt="feature1" />
+            </div>
+
+        </main>
+    </div>
+</div>
+
+<hr>
+<%include ../include/footer.html %>
+</body>
+
+
+</html>

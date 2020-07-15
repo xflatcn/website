@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<head xmlns="http://www.w3.org/1999/html">
+    <title>基础资料-APP365第三方物流系统</title>
+    <%include ../include/head_res.html %>
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/assets/css/docs.min.css" rel="stylesheet"/>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-146052-10', 'getbootstrap.com');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body>
+<%include ../include/top_nav.html %>
+
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+                </button>
+            </form>
+
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_start.html">
+                        开始使用
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_order.html">
+                        订单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_dispatch.html">
+                        车辆调度
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_track.html">
+                        跟踪
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_return.html">
+                        回单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_finance_01.html">
+                        财务管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_abnormal.html">
+                        异常件
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_analysis.html">
+                        经营分析
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_query.html">
+                        查询
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_service.html">
+                        客服
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                        基础资料
+                    </a>
+                    <ul style="list-style: none;font-size: 15px">
+                        <li><a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                            1、人与组织
+                        </a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_02.html">
+                            2、商品设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_03.html">
+                            3、运输设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_04.html">
+                            4、运价管理</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_05.html">
+                            5、财务设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_06.html">
+                            6、系统设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_07.html">
+                            7、网站维护</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_08.html">
+                            8、工具及维护</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#one">系统登录</a></li>
+                <li class="toc-entry toc-h2"><a href="#two">基础设置</a></li>
+                <li class="toc-entry toc-h2"><a href="#three">运输设置</a></li>
+                <li class="toc-entry toc-h2"><a href="#four">商品设置</a></li>
+                <li class="toc-entry toc-h2"><a href="#five">财务设置</a></li>
+                <li class="toc-entry toc-h2"><a href="#six">报价管理</a></li>
+                <li class="toc-entry toc-h2"><a href="#seven">系统设置</a></li>
+                <li class="toc-entry toc-h2"><a href="#eight">网站维护</a></li>
+                <li class="toc-entry toc-h2"><a href="#nine">工具</a></li>
+            </ul>
+        </div>
+
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" role="main">
+            <h4 id="one" style="margin-bottom: 40px;margin-top: 30px" >
+                系统登录
+            </h4>
+            <p>
+                <strong style="color: red">1、登录系统必须使用Chrome内核的浏览器，如：谷歌浏览器、360极速浏览器、360安全浏览器等等；不能使用IE内核的浏览器或其他浏览器或将浏览器的内核换成IE的浏览模式（建议使用谷歌浏览器比较好）
+                </strong>
+                </br></br>2、系统开通账号之后，在网站（www.app365.com）上点击登录，进入系统登录界面；
+                </br></br>3、员工登录：员工登录首先需要系统管理员开通账号之后，才能登录系统，登录的用户名是开通系统所使用的手机号码，在系统管理员给员工开通账号的时候，系统会自动发送短信给对应的手机号码中，短信内容包含登陆系统的密码。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_01.png" class="img-fluid" alt="feature1" />
+            </div>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_02.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p style="margin-top: 20px">
+                <strong>修改密码</strong>
+                </br></br>在用户登录之前，可以对登录的密码进行修改，以保障账号的安全。详细步骤可以参考APP365网站>>>服务与支持>>>产品问答>>>【APP365物流系统，用户怎么重设密码？】或复制打开下面的链接：
+                http://www.app365.com/news/7c5f2e75-e60c-49e1-95bc-1b38d03f101a.jhtml
+                </br></br>
+            </p>
+
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_03.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="two" style="margin-bottom: 40px;margin-top: 50px" >
+                基础设置
+            </h4>
+            <p>
+                <strong>系统的基本标识</strong>
+                </br></br>1、红色星号“<strong style="color: red">*</strong>”：表示为必填信息；
+                </br></br>2、查找标识<img src="/images/product_manuals/baseinfo_04.png" class="img-fluid" alt="feature1" />：表示点击弹出新窗口进行查找；
+                </br></br>3、有下拉菜单<img src="/images/product_manuals/baseinfo_05.png" class="img-fluid" alt="feature1" /> ：表示可以选择下拉菜单的内容；
+                </br></br>4、有掩藏内容 <img src="/images/product_manuals/baseinfo_06.png" class="img-fluid" alt="feature1" />：可以点击显示掩藏的内容；
+                </br></br>5、条件查询。查询时，可以选择相应的条件进行不同的查询，一般在用条件查询时，应先清除其他的条件，点击<img src="/images/product_manuals/baseinfo_07.png" class="img-fluid" alt="feature1" /> 即可；
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_08.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br>6、页面的列表框。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_09.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br>7、列表设置：设置列表显示的字段的顺序和内容的设置
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_10.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br> <strong>网点</strong>
+                </br></br><strong style="color: red">1、网点机构就是公司的分公司或网点</strong>
+                </br></br>2、公司的网点信息：网点信息将会在公司的网站上显示。包含网点名称、联系人、联系方式、经营范围等信息。
+                </br></br>3、设置网点机构的编辑主要作用是增加公司的网点，即在系统中增加分公司，便于指定公司的员工在不同的网点操作；
+                </br></br>4、上级机构是增加网点的上一级机构；
+                </br></br>5、步骤：基础资料→网点→新增→填写完整→保存。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_11.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br> <strong>员工</strong>
+                </br></br><strong style="color: red">1、员工的主要功能作用是给员工开通账号，让员工有自己的账号登陆到系统里面进行操作和系统记录员工资料；</strong>
+                </br></br>2、在新增加员工的时候，必须准备无误的填写新增加员工的<strong style="color: red">手机号码</strong>，因为系统会将初始密码发送至用户对应的<strong style="color: red">手机短信</strong>中；而员工登陆系统的用户名就是在增加员工资料时所填写的手机号码。
+                </br></br>3、所属机构就是将员工分配在所属的网点登陆；
+                </br></br>4、步骤：基础资料→员工→新增→填写完整→保存
+                </br></br>5、在【任职状态】栏中，填写“在职”，如果员工以后因为原因不在公司上班，则可在此选填“离职”，把员工的状态填写成离职后，员工的用户名就不能登录进系统里面。系统里面的员工只有任职状态为“在职”的情况下可以登陆系统，其他任何状态都登陆不了系统；
+                </br></br>6、用户名第一次登陆系统，密码是由系统发送的初始密码。如要改变登录的密码，则需要回到系统登录的界面，点击【忘记密码或重置密码】，按照提示操作即可。或可参考公司的主页www.app365.com，按顺序点击：服务与支持>>产品问答>>APP365物流系统，用户怎样重设密码?或点击链接查看重设密码的方法：
+                <br/>http://www.app365.com/news/7c5f2e75-e60c-49e1-95bc-1b38d03f101a.jhtml
+                <br/><strong style="color: red">修改密码也可由系统管理员在员工资料里面，填写密码的位置直接填写新的密码保存修改；</strong>
+                </br></br>7、当增加的员工为公司的业务员或司机的时候，应在职员类型位置勾选小件员或勾选为司机；
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_12.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br>8、指定机构：是指定的员工可以在一个地方，通过设置指定的机构的方式，查看多个网点和进行多个网点的操作。比如说现在员工登陆网点是深圳，在管理员给员工指定访问上海网点之后，登陆员工就可以在网页右上角登录人位置切换到上海，进行上海网点的操作。
+                </br></br>9、步骤：基础资料→员工→选择员工→指定机构→选择机构→保存
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_13.png" class="img-fluid" alt="feature1" />
+            </div>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_14.png" class="img-fluid" alt="feature1" />
+            </div>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_15.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br> <strong>客户</strong>
+                </br></br>1、物流公司的客户资料可以在系统里面可以管理公司的普通客户、VIP客户、月结客户和零散客户，对客户进行分级、进行维护等。
+                </br></br>2、客户资料尽量维护完整，便于后续表格统计的准确性，也便于在运单信息录入的时候，准确选择客户资料；
+                </br></br>3、步骤：基础资料→客户→新增客户→填写客户资料→保存
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_16.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br>4、客户的资料可以修改，一个客户可以增加多个联系人和增加多个装卸货地点。
+                </br></br>5、删除客户，目前系统不提供客户删除功能。因为客户产生了历史数据，删除会对系统数据的完整性产生影响，所以只有进行客户合并 将相同的客户或是需要进行合并的客户合并在一起，客户合并之后，在客户下面的地点和联系人会一起合并在客户下面；
+                </br></br>6、在客户对应的联系人及用户功能里面，可以给客户开通账号，客户可以通过开通的账号登录到会员系统中，管理可以自己的发货下单统计以及账单对账，打印运单及标签等等操作。
+                </br></br><strong style="color: red">7、维护月结客户，必须在客户资料录入里面，结算相关信息中，勾选为是否可月结或默认为月结。</strong>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_17.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br> <strong>客户会员</strong>
+                </br></br>1、客户会员就是物流公司给VIP重要客户在系统中开通使用账户，VIP客户可以用物流公司给开通的账号进行登陆系统，管理客户自己的业务情况；可以进行网上自行下单、查看下单的状况、审核下单情况、发货管理、打印标签、统计对账、统计历史发货情况<strong style="color: red">（客户VIP会员账号登录系统，只能查看自己的收发货情况，不能查看自己以为的数据，且VIP账户的操作除了可以自行下单以为，其他的数据只能查看，不能操作）</strong>。
+                </br></br>2、给客户开通的会员后，客户登陆系统的账号是在开通会员是填写的手机号码，密码则会由系统发送短信到手机上。客户也可以自己更改密码，更改密码的方法和员工更改密码的步骤一样；
+                </br></br>3、开通客户会员的方法请参考公司网站www.app365.com主页，点击步骤：服务与支持>>产品问答>>如何给客户开通客户开通会员系统或点击链接查看开通会员的方法：
+            http://www.app365.com/news/f6d1c77c-c497-4b36-920a-885370b0c3dd.jhtml
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_18.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br>4、会员客户登录系统显示的界面，会员客户只能管理自己的收发货的情况，同时会员客户还可以在系统中管理会员自己与其他客户的收发货资料。
+                </br></br>5、会员客户登陆到系统以后，可以使用excel表格批量导入订单，直接生成系统订单。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_19.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br> <strong>收发货单位</strong>
+                </br></br>1、收发货单位指的是物流公司客户的收发货单位，同一个客户可以有多个收发货单位。列如公司的厂家客户A同时拥有多个仓库发货，这时该客户就拥有多个发货单位；
+                </br></br>2、客户的收发货单位在列表框中可以新增、修改、删除收发货单位的装卸货地点和联系人；
+                </br></br>3、收发货单位也可在录单的时候，完整录入，系统自动保存到收发货基础资料里面。
+                </br></br>4、操作步骤：设置人与组织收发货单位选择对应的客户新增填写收发货单位资料保存
+                </br></br>5、<strong style="color: red">收发货单位必须对应到客户。</strong>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_20.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br> <strong>服务商</strong>
+                </br></br>1、服务商也就是公司业务进行中转外包的第三方公司或个人，在填写服务商的资料的时候可以给服务商进行分级等操作。包含专线公司，保险公司，个人等。
+                </br></br>2、服务商的类型可分为：物流、送货、安装、维修等等；
+                </br></br>3、如果维护的服务商资料是公司下家的物流公司，还可以给下家物流公司开通系统账号，下家物流公司的账号与系统的单独的，只是可以通过中转外包把运单直接转到下家系统里面；
+                </br></br>4、服务商不支持删除，如果有重复的服务商，可以选择讲重复的服务商进行合并。
+                </br></br><strong style="color: red">5、系统可以维护服务商的服务网点和网点的服务区域，系统可根据参数设置，在中转外包的时候，系统根据服务的信誉等级、服务网点、服务区域自动匹配运单中转外包的服务商，自动中转外包操作，从而提高调度的工作效率。</strong>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_21.png" class="img-fluid" alt="feature1" />
+            </div>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_22.png" class="img-fluid" alt="feature1" />
+            </div>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_23.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="three" style="margin-bottom: 20px;margin-top: 50px" >
+                运输设置
+            </h4>
+            <p>
+                <strong>司机</strong></br></br>
+                1、公司的司机：包含司机员工以及外请司机。外请司机是指临时外请的司机，自有司机就是公司的员工；
+                </br></br>
+                <strong style="color: red">2、司机资料一是登记司机的档案，二是给司机开通登陆司机APP的账号，当司机的信息填写完成保存后，系统自动给给司机开通账号，并讲司机登陆APP的账号和密码发送到司机的手机号码上；</strong>
+                </br></br>
+                3、填写司机信息的时候可以上传指定司机的车辆图片信息。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_24.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br>
+                <strong>车型</strong></br></br>
+                1、车型是物流公司为了服务客户，在提货或配载的时候，根据客户的货物来确定物流公司所确定需要的车型大小，维护车型是为了物流公司方便及时准确调度。
+                </br></br>
+                2、系统已经有预设的车型，物流公司可以自己修改、删除或新增自己公司对应的车型以及配载吨位；
+                </br></br>
+                <strong style="color: red">3、在车型的资料里面，可以维护车型对应的计费体系里面，按照车型计费的计价方案。</strong>
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_25.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br>
+                <strong>车辆</strong></br></br>
+                1、车辆信息包含车辆的信息和车辆的驾驶员，车辆资料主要是登记车辆档案；
+                </br></br>
+                2、公司的车辆包含公司自有车辆及外请、加盟及挂靠公司的车辆，在填写车辆信息时，注明车辆性质即可；
+                </br></br>
+                3、完整填写车辆信息还需将车辆的资料图片上传到资料中，如车辆行驶证，车辆照片或司机驾驶证图片上传。
+                </br></br>
+                4、司机信息在车辆信息中包含一部分，如需完整填写，则在司机信息中完善；
+                </br></br>
+                5、在车辆列表中可以查看已维护的车辆
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_26.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="four" style="margin-bottom: 40px;margin-top: 50px" >
+                商品设置
+            </h4>
+            <p>
+                <strong>仓库仓位</strong></br></br>
+                1、维护仓库仓位资料主要是用于仓库管理中使用，APP365系统可进行仓库管理和配送一体化的业务流程管理，如仅是配送业务，则不用维护仓库资料；
+                </br></br>
+                2、仓库仓位是在系统里面维护公司仓库和仓库里面的每一个储位资料，便于在出入库时准确出入库的操作。在仓库中增加仓位属性，同时进行仓位管理，以完善仓库的基本信息，提高仓库库存管理质量；
+                </br></br>
+                3、操作步骤：基础资料→仓库仓位→新增仓库→新增库区→新增库位
+                </br></br>
+                4、新增仓库的时候，仓库的编码根据公司的实际需求来填写，仓库的类型选填即可；
+                </br></br>
+                5、新增库区的时候，上级库区查找选择上级仓库即可。
+                </br></br>
+                6、新增仓库库位的时候，可以打印库位的条码，贴在库位的位置上面，便于扫描商品上架，对应库位的操作。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_27.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p></br>
+                <strong>计量单位</strong></br></br>
+                1、计量单位是在仓库系统里面选择商品计量的单位，在计量单位功能里面点击引入计量单位即可。
+                </br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_28.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p></br>
+                <strong>商品资料</strong></br></br>
+                1、管理公司的商品信息。商品信息由客户信息、商品类别、商品资料组成。商品信息必须从属于某个客户。
+                </br></br>
+                2、增加的商品资料必须对应客户，如果新增商品资料的时候，没有选择商品的所属客户，那么增加的商品资料讲无法使用；
+                </br></br>
+                3、针对三方系统，对应客户增加商品资料以后，在运单录入填写商品明细的时候，可以点新增选择客户的商品资料。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_29.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                </br>&#12288 1)、新增商品类别(商品类别将在商品信息中使用)
+                </br>&#12288 A、操作步骤：进入商品管理页面。在商品类别页签内，点击“新增”按钮，系统将弹出商品类别信息录入框，录入商品类别信息，点击保存按钮即可。
+                </br>&#12288 B、商品的类别可以进行修改，也可以进行删除商品类别。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_30.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                </br>&#12288 2)、新增商品资料
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_31.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                </br>&#12288 a、进入商品管理页面，切换到商品资料页签。
+                </br>&#12288 b、点击上方列表的“新增”按钮，将会弹出商品资料录入框，录入商品资料的详细信息，点击保存按钮即可；
+                </br>&#12288 c、商品资料信息可以修改，也可以删除；
+                </br>&#12288 d、在录入商品资料的时候，尽量录入完整，从而完善出入库数据的统计。
+                </br>&#12288 e、批次管理：勾选批次管理后，商品在出入库的时候，才能按照批次进出库的管理入库，出库；
+                </br>&#12288 f、保质期管理：保质期管理需要维护商品的保质期（保质期按照“天”为单位填写），在商品入库的时候，填写商品的生产日期，系统根据生产日期，和商品的保质期，计算商品的过期时间，保证商品库存及时提醒预警；
+                </br>&#12288 g、组合件管理：设置多个商品组合为一个商品或一个商品有多个配件的设置。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_32.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br>&#12288 h、商品关联客户：进入商品管理页面，切换到商品资料页签，选中商品记录，点击“关联客户”按钮，系统将会弹出关联客户信息弹出框，选中需要关联的客户，点击“确认”按钮确认关联即可；
+                </br>&#12288 i、指定商品配件：进入商品管理页面，切换到商品资料页签，选中商品资料记录，把下方列表切换到商品配件，点击商品配件列表中的“新增”连接，系统将会弹出配件新增弹出框。指定好配件信息，点击保存按钮保存即可。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_33.png" class="img-fluid" alt="feature1" />
+            </div>
+
+
+            <h4 id="five" style="margin-bottom: 20px;margin-top: 50px" >
+                财务设置
+            </h4>
+            <p>
+                1、财务设置的相关功能已经移到财务功能的更多里面。
+                </br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_34.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p></br>
+                <strong>账户管理</strong></br></br>
+                1、账户管理是维护、设置系统里面的财务账户，用于财务结算的时候，针对账户进行结算；
+                </br></br>
+                <strong style="color: red"> 2、账户的类型有现金账户、银行账户、货款账户、中转账户、日常收支账户、预付款账户，每一个网点机构都可以设置系统账户；</strong>
+                </br></br>
+                3、账户可以查看当前账户的余额多少情况。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_35.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p></br>
+                <strong>计费项目</strong></br></br>
+                1、计费项目是物流公司财务查看或新增财务所使用的计费字段；
+                </br></br>
+                2、计费项目可以新增需要的计费项目，也可以把系统里面已有的引入到模块中，对已经引入的计费项目进行修改；
+                </br></br>
+                <strong style="color: red"> 3、计费字段的使用必须分配到后面的事务计费项目中之后，才能进行使用。</strong>
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_36.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p></br>
+                <strong>会计科目</strong></br></br>
+                1、会计科目：财务系统的标准科目。系统提供的标准的会计科目，用户只需要引入预设科目即可
+                </br></br>2、会计科目新增：进入会计科目页面，点击“新增科目”按钮，或者选中上级科目之后点击“新增下级”按钮；
+                </br></br>3、在系统弹出的科目维护框中录入新增的科目信息。注意点：系统不允许增加顶级的会计科目，用户新增的科目必须指定上级科目；科目的编码必须唯一，不能使用系统已经存在的编码，录入完成之后，点击“保存”按钮保存即可；
+                </br></br>4、会计科目可以删除，进入会计科目页面，选中需要删除的会计科目，但系统预设的会计科目不允许删除
+                </br></br>5、科目可以预设，进入会计科目页面，点击“引入预设项目”即可，已经引入的会计科目不会重复引入。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_37.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p></br>
+                <strong>计费字段扩展</strong></br></br>
+                1、计费字段扩展是根据物流公司财务的需要，将计费项目分配在对应的使用项目组范围中去；
+                </br></br>2、系统财务计费项目组分为：运单计费字段、运输计费字段、仓储计费字段。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_38.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p></br>
+                <strong>事务计费项目</strong></br></br>
+                1、事务计费项目是将计费项目字段，根据计费字段扩展所分配的项目组，再细化将计费项目字段分配到具体使用的事务类型中去；
+                </br></br>2、事务类型是根据具体的业务类型区分的，增加的计费项目字段在财务模块的对应功能和对应的报表以及对应的业务模块中显示。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_39.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="six" style="margin-bottom: 20px;margin-top: 50px" >
+                报价管理
+            </h4>
+            <p>
+                <strong>计费地点</strong></br></br>
+                1、计费地点维护是维护当运价体系的地点不能与系统的标准地点相匹配的时候，系统通过设置计费地点，将客户运价地点与系统标准地点进行匹配的设置，从而达到客户提供的地点在系统里面进行费用计算。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_40.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>运价方案</strong>
+                </br></br>1、运价方案：运价体系报价比较复杂，一是对不同的商品（重量、体积、商品型号），不同的线路距离（城市）和不同的商家进行的客户报价；二是对不同的车型，不同的车辆性质和不同的司机进行的司机报价；三是对不同的服务商进行不同的商品（重量、体积、商品型号），不同的线路距离和不同的商家进行的服务商报价。
+                </br></br>2、设置运价方案的目的地是为公司解决复杂的运价体系，当公司存在多种运价体系的时候，单靠简单的运价计算根本解决不了复杂的运价，所以只有针对每一种价格体系设置一种方案，才能准确无误的解决计算运价的问题。
+                </br></br>3、设置运价方案后，用于在设置报价的时候，选择对应的运价方案进行设置费率。设置运价方案一定要选择方案的类型，方案的类型有客户报价方案、服务商报价方案、司机报价方案。客户报价方案是用于设置客户报价的；服务商报价方案是用于设置服务商报价的；司机报价方案是用于设置司机报价的。
+                </br></br>4、编号是运价字段的编号排序，点击选择即可；
+                </br></br>5、字段名称是计费的名称，需要根据公司的价格体系填写报价名称。
+                </br></br>
+            </p>
+
+            <p>
+                <strong>客户报价方案</strong>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_41.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>司机报价方案</strong>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_42.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>服务商报价方案</strong>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_43.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>客户报价</strong>
+                </br></br>1、客户报价是设置网点收客户的报价费率；用于公司按照设置收客户的费用标准，计算应收客户的费用（收货网点向客户收取的价格费率）；
+                <strong style="color: red"> </br></br>2、客户报价用于维护公司标准收货价或大客户、项目客户、合同客户的和合同计价规则或计费标准，以便于系统自动计算应收客户的运费；
+                </br></br>3、客户报价功能可维护应收客户的运费、提货费、送货费；
+                </br></br>4、客户报价支持计费模式有：重量、体积、重量体积取大、重量体积取小、件数、吨公里、公斤公里、整车送、整车回、整车来回、区分重泡货，重货按重量计费、泡货按体积计费、整车多点配送按最远距离计费、按天累计体积计费等等；
+                </strong></br></br>5、客户报价用于在运单录入回客户下单时，自动计算应收客户的运费，提货费，送货费。
+
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_44.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br>5、所属网点：可以针对某一个网点进行设置价格，当所属网点选择为【公共】的时候，表示设置的运价适用于公司所有的网点；
+                </br></br>6、运价方案：是当公司的计费费率是比较复杂的费率体系，系统需要选择事先在运价方案中维护的对应【客户运价方案】，来用于计费的维护；
+                </br></br>7、计费方式：是设置计算费率的方式，系统设置计费方式有：重量（kg/t），体积，重量体积取大/取小，件数、吨公里、公斤公里、整车送、整车回、整车来回等等以及选择维护运费、提货费或送货费；
+                </br></br>8、计费单位：是设置计算费率的单位，必须和前面的计费方式对应；
+                </br></br>9、报价对象：可以维护设置针对不同的客户有不同报价，报价对象需要选择对应维护的客户资料里面的客户名称，当报价对象选择为【公共】的时候，表示此报价适用于所有的客户；
+                </br></br>10、计方重量是进行重量体积的转换，以及区分重泡比的参数值设置；
+                </br></br>11、重量费率表示按照重量计算的运价；
+                </br></br>12、体积费率表示按照体积计算的费率；
+                </br></br>13、起点数量和起点费率是最低计算的数量和最低收费；
+                </br></br>14、生效时间和失效时间：指的是维护的报价的生效和失效时间，必须要设置失效日期，要不然设置的时间就没有生效。
+                </br></br>15、数量1、费率1，数量2、费率2表示按照阶段计算费用，如：数量1为：5kg，费率1为0.5元，数量2为10kg，费率2为0.4元，数量1费率1则表示1至5公斤按照0.5元/公斤计算，数量2费率2则表示5至10公斤按照0.4元/公斤计算费率；
+                </br></br>16、设置的重量费率体积费率，那么后面的数量1、2、3就没有作用；（重量体积费率和数量费率只能设置一个）
+            </p>
+
+            <p>
+                <strong>服务商报价</strong>
+                </br></br>1、服务商报价是维护网点对外包服务商的报价；
+                </br></br>1、服务商报价是设置运单实际转货城市至运单目的地的费率，是物流公司付给中转服务商的价格。
+                <strong style="color: red"> </br></br>2、服务商报价功能可维护应付给服务商的运费、提货费、送货费；
+                    </br></br>3、服务商报价支持计费模式有：重量、体积、重量体积取大、重量体积取小、件数、吨公里、公斤公里、整车送、整车回、整车来回、区分重泡货，重货按重量计费、泡货按体积计费、整车多点配送按最远距离计费、按天累计体积计费等等；</strong>
+                </br></br>4、客户报价用于在运单录入回客户下单时，自动计算应收客户的运费，提货费，送货费。
+                </br></br>5、服务商报价用于中转外包功能的自动计算应付给中转服务商的中转费计算。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_44.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>司机报价</strong>
+                </br></br>1、司机运价是维护公司支付给运输司机的费率；
+                </br></br>2、司机报价不论是公司自有车或外请车，只要是业务运输的司机，都可以设置报价进行司机运费的计算；
+                <strong style="color: red"> </br></br>3、司机报价支持计费模式有：重量、体积、重量体积取大、重量体积取小、件数、吨公里、公斤公里、整车送、整车回、整车来回、区分重泡货，重货按重量计费、泡货按体积计费、整车多点配送按最远距离计费、按天累计体积计费等等；
+                </strong>
+                </br></br>4、维护司机报价的方法和维护客户报价的操作方法以及字段的含义都是一致的。
+                </br></br>5、司机报价用于调度派车，提货调度，送货调度功能模块的自动计算司机运费。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_45.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>发车指导价</strong>
+                </br></br>1、发车指导价是维护车辆起运城市至目的城市的参考价格，相当于维护车次的起运城市到目的城市的参考标准价格；
+                </br></br>2、发车指导价不作为司机运输费率的计算，只适用于调度派车的时候，计算车辆起运城市至目的地城市之间的参考价格，此价格为网点的参考报价，最终以实际收取的报价为准。
+                </br></br>3、发车指导价用于调度派车的时候，系统自动计算预估费用。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_46.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                <strong>公共费率</strong>
+                </br></br>1、公共费率是设置当公司有加盟网点或快递系统里面设置预付款结算的功能，主要是设置总部或分拨中心进行系统自动扣费的设置，一般第三方物流系统不涉及到该功能的设置。
+            </p>
+
+            <h4 id="seven" style="margin-bottom: 20px;margin-top: 50px" >
+                系统设置
+            </h4>
+            <p>
+                系统设置包含设置和系统工具，系统管理员根据公司的需求对系统进行管理设置，也相当于系统管理员在系统中管理公司级员工的一个权限。
+                </br></br>1、设置中包含系统设置、应用设置和网站维护，在设置中比较重要的设置是权限设置、系统参数、设备配置及网站维护的功能；
+                </br></br>2、权限设置是系统管理员管理员工的权限；
+                </br></br>3、系统参数是系统管理员设置系统的工具；
+                </br></br>4、设备配置是设置连接系统的打印运单和打印标签的打印机及打印模板设置；
+                </br></br>5、网站维护是系统管理员设置，维护与物流系统相关网站，及网站的内容更新，发布；
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_47.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>权限设置</strong>
+                </br></br>1、权限设置有两个功能：一直给员工授权，二是增加系统操作的角色；此功能很重要，一般只能系统管理员操作；
+                </br></br>2、权限设置是系统管理员管理员工的权限，这是公司在系统中管理员工的唯一权利，系统管理员根据员工不同的角色分配不同的访问系统的权限，从而在系统中给员工不同的分工；
+                </br></br>3、步骤：设置→权限设置→选择授权对象→选择授予权限→保存。
+                </br></br>4、在角色编辑中，一次可以选择多个员工进行授权；
+                </br></br>5、权限系统管理可以自己在系统里面增加不同的权限角色；
+                </br></br>6、在分配到该角色用户框中，只需将可用用户添加到已选用户，即可进行角色授权了。删除则按相反的方法。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_48.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                </br></br>7、在授权的时候，只需根据公司分配的角色任务，勾选访问内容，然后点击保存即可；
+                </br></br>8、对员工授权保存之后，需要被授权的账号注销系统登陆之后，重新登陆才生效。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_49.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>个人信息</strong>
+                </br></br>1、个人信息显示是当前登录人的信息。
+                </br></br>2、可以在此功能里面，修改自己的密码。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_50.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>公司信息</strong>
+                </br></br>1、公司信息显示的是当前登录网点公司信息。
+                </br></br>2、此功能可以修改公司名称，联系人等等，修改之后，在系统下一次登陆生效。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_51.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>系统参数</strong>
+                </br></br>1、系统参数设置是系统管理员管理系统的设置，系统管理员根据公司的情况，在系统中进行更改设置。
+                </br></br><strong style="color: red"> 2、系统参数可以设置系统自动中转，自动计算运费，自动生成单号，控制随便填写客户资料，服务商，司机等等；具体的参数设置含义都在对应的设置后面有具体的说明；</strong>
+                </br></br>3、系统参数里面的系统版本，必须设置为V3版本，V1版本为第三方历史版本；
+                </br></br>4、运单和标签模板可以进行选择系统中的模板，关于模板的设计，将在【工具】中的【模板管理】进行讲解；
+                </br></br>5、步骤：设置→系统参数→选择→保存。
+                </br></br>6、系统参数设置保存以后，需要系统注销登陆，再次登陆才生效。
+
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_52.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p style="margin-top: 20px">
+                <strong>登陆认证</strong>
+                </br></br>登录认证是公司控制系统电脑登录权限，系统在电脑登录的时候，必须申请，经过公司同意后才能登录系统。
+
+            </p>
+
+            <p>
+                <strong>设备配置</strong>
+                </br></br><strong style="color: red">1、设备配置主要是安装打印插件，设置打印机和打印的模板；只要是需要系统打印，必须安装打印插件。</strong>
+                </br></br>2、安装打印插件。浏览器本身是不支持其他的插件，需要安装打印插件才能进行打印机的连接。刚注册系统打开运单录入界面，系统会提示“未安装打印插件”的提示；
+                </br></br>3、安装步骤：打开设备配置->选择插件类型，选择LODOP的插件类型->系统页面自动刷新，提示下载32位的还是64位的插件->查看电脑操作系统的位数->下载插件->打开插件安装包，进行插件安装并启动->提示插件安装成功并启动->刷新页面即可。
+                </br></br>4、或打开公司主页www.app365.com：支持>>产品问答>>怎样安装打印插件；
+                </br></br>5、已安装打印插件的电脑则不需要第二次安装。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_53.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="eight" style="margin-bottom: 40px;margin-top: 50px" >
+                网站维护
+            </h4>
+
+            <p>
+                <strong>网站设置</strong>
+                </br></br>1、网站设置是系统管理员管理，设置公司的网站，所填写的内容，物流公司在使用APP365物流系统后，APP365平台会赠送一个二级域名的网站给物流公司，物流公司则根据自己公司需求设置网站。如果物流公司有自己的一级域名的网站，可接入软件公司的服务器，和物流软件系统整合在一起，网站的后台设置同样是系统设置里面的网站设置；
+                </br></br>2、公司名称和电话号码，公司邮箱既是公司网站显示的内容，也是物流公司打印在运单上面的内容；
+                </br></br>4、网站的模板以自己选择；
+                </br></br>5、公司的logo可以自己添加物流公司的logo，操作方法：打开网站设置，在公司logo位置在电脑上面选择logo文件添加，设置高和宽，保存即可；
+                </br></br>6、首页的业务介绍物流公司都可以自己编辑发布；
+                </br></br>7、优化网站的关键字词填写上后，进行优化网站，提高公司网站的知名度；
+                </br></br>8、网站首页的幻灯片可以自己添加和更换。
+
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_54.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>栏目管理</strong>
+                </br></br>1、栏目管理是设置网站发布的内容，修改发表内容的访问效果；
+                </br></br>2、可以更改、增加及删除网站栏目的内容；
+
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_55.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>内容管理</strong>
+                </br></br>1、网站发布内容的功能，点击网页界面左边的栏目，在列表框中对应栏目已发表的内容，新发表内容，点击新增，编辑内容发布即可；
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_56.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="nine" style="margin-bottom: 40px;margin-top: 50px" >
+                工具
+            </h4>
+
+            <p>
+                <strong>运单修改</strong>
+                </br></br>运单修改功能主要是针对运单已经发出的运单进行修改，一般情况下，运单在录入保存时可以进行修改，保存下达之后运单就不允许在进行修改。当运单状态为【新建】的情况下，运单的信息可以进行修改；当运单状态为【已下达】的情况下，运单信息不允许进行修改，如果需要进行修改，需要有【反下达】权限的才能进行修改；当运单状态为【在途】或【在途】之后的状态，只要运单费用没有结算，需要修改运单的信息，就只有通过工具里面的运单修改进行修改运单信息。
+                </br></br>1、运单修改分为修改网点收货单和修改厂商委托单两种，在第三方系统里面，我们主要讲解修改厂商委托单的操作。
+                </br></br>2、运单修改有单独的权限管理，一般公司操作只将此权限授予给公司的管理人员进行操作；
+                </br></br>3、操作步骤：打开运单对应的修改功能→输入运单号→点击查询→修改运单信息→保存
+
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_57.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                <strong>Excel文件导入</strong>
+                </br></br> Excel文件导入主要是导入公司的运单、商品资料、客户资料，减少公司对大量数据的操作；导入分为设置导入模板和Excel文件导入两个步骤。
+                </br></br>Excel文件导入模板或导入，都必须要求上传的excel表格版本为97-2003版本的excel表格。
+                <strong>Excel导入模板设计</strong>
+                </br></br>1、导入模板的类型分为：运单模板、运价模板、商品资料模板、客户资料模板等多种模板类型；
+                </br></br>2、在设置模板的时候，需要将导入Excel表格字段和系统的字段进行对应，系统支持Excel顺序匹配字段；
+                </br></br>3、在设置模板的时候，对应关系表中，【不能为空】项必须选择一项不能为空；
+                </br></br>4、对应字段的顺序必须正确，不能对应关系乱，一但出现对应关系混乱，就会导致导入Excel表格失败。
+                </br></br>5、操作流程：进入Excel导入模板设计→填写模板的名称/模板类型→上传模板Excel表格→点击刷新，弹出表格字段→确定字段对应关系→选择不能为空项→保存。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_58.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                <strong>Excel文件导入</strong>
+                </br></br>1、Excel文件导入是在设计好导入模板之后进行的导入工作；
+                </br></br>2、Excel文件导入操作流程：进入Excel文件导入功能→点击上传文件→选择导入模板/导入记录→选择导入的文件→确认上传→进入数据处理的界面→选择导入记录，进入处理数据的弹出框→确定。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_59.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                </br></br>3、如需处理数据转为运单，则需要选择运单所属客户的名字和运单的类型和必要的信息；如处理数据转为商品资料，则需要选择商品资料所属的客户等，此处主要介绍导入运单的方法。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_60.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p> </br></br>
+                <strong>打印模板管理</strong>
+                </br></br> 打印模板管理是设置打印的模板，APP365物流系统支持自主设计打印的模板，打印模板分为空白纸打印模板和已经印刷好的运单进行套打模板两种，系统设置了几种参考模板，可以选中复制之后进行使用；
+                </br></br>详细的模板设置及制作，请参考一下步骤：</br>
+                <strong>打印模板：</strong>
+                物流公司打印运单和标签之前，根据物流的公司的需求选择一种模板，物流公司也可以根据自己印刷的运单进行模板调整。在使用模板的时候，先选择一种模板，进行复制就可以使用了；
+                <strong>操作步骤：</strong>
+                在模板管理列表里面选中一种模板→点击上方模板复制。
+                <strong>模板设计：</strong>
+                模板的设计分为运单模板设计，标签模板设计，设计的模板分为两种，一种是已经印刷好的运单进行套打的设计（如图所示一），第二种是完全空白运单模板设计（如图所示二）；
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_61.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_62.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>第一，已经印刷好的运单进行套打的运单模板设计：</strong>
+                </br></br>1、设计套打运单模板的时候，首先要要将印刷的运单扫描之后，将图片切下来，处理图片的大小尺寸为运单的实际大小的尺寸，图片的像素为96；
+                </br></br>2、点击【设置】→【打印模板】（模板管理）→【模板设计】，进入模板设计的功能界面。填写设计模板的名称，在【模板类型】的位置选择运单模板，填写模板的宽和高度，填写的宽和高度为运单的实际宽和高度尺寸，单位为毫米；【默认字号】为打印的字号大小，为15，自己在设计的时候根据情况进行修改打印字号的大小；
+                </br></br>3、在指定背景图片位置【选择文件】，将已经处理好的图片上传到系统里面，进行模板的处理；
+                </br></br>4、在【可选字段】里面选择需要的字段内容，点击添加到【已选字段】里面，同时在效果预览图中的左上角出现，选中的字段在效果图中字体变为红色，然后通过坐标X轴和Y轴调整字段的位置，X轴为左右移动，Y轴为上下移动；
+                </br></br>5、在调整字段位置的时候，可以通过快捷键来迅速确定调整位置。快捷键的方法：在已选字段里面选中字段，使其在效果图中选中字段变为红色，然后按住ctrl键，鼠标左点击确定坐标位置；
+                </br></br>6、套打的运单模板在打印的时候，和运单字段的位置，打印机的设置，打印机右侧的标尺有关，所以在调整位置的时候，可以通过模板的【偏移】来调整整体移动，使其位置正确。如：X轴为-3，那么模板就整体往做移动3毫米，X轴为5，模板就整体向右移动5毫米，上下移动同样调整Y轴来实现。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_63.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>第二，完全空白运单模板设计：</strong>
+                </br></br>1、点击【设置】→【打印模板】（模板管理）→【模板设计】，进入模板设计的功能界面。填写设计的模板名称，在【模板类型】的位置选择运单模板，填写模板的宽和高度，填写的宽和高度为空白运单的整体宽和高度尺寸，单位为毫米；【默认字号】为打印的字号大小，为15，自己在设计的时候根据情况进行修改打印字号的大小；
+                </br></br>2、点击右侧【新建线条】，根据空白纸的尺寸（除去带孔的边缘，空白纸实际打印的尺寸，一般常用的241*280三联二等分的运单打印纸，实际打印尺寸为214*140）新建表格，每一条直线的一端由X轴和Y轴交叉的点组成，只需要确定直线两端两个点的位置，即可新建一条直线。
+                </br></br>3、表格制好后，根据表格填入需要打印的内容，点击【新建文本】，填写需要打印的固定字段，如：发货人，收货人等。在新增固定文本的时候，新增的字段名称就是固定字段的文本。文本增加好后，根据X轴和Y轴将新增的文本调整到所需要打印的位置，同样可以使用快捷键（选中调整的字段，按住ctrl键，在填写位置左击鼠标即可）进行调整；
+                </br></br>4、在【可选字段】里面选择根据内容的活动字段，如：收货人名字，收货人电话号码等，然后点击添加到【已选字段】里面，选中已选字段，根据X轴和Y轴将已选字段调整到所需要打印的位置，同样可以使用快捷键（选中调整的字段，按住ctrl键，在填写位置左击鼠标即可）进行调整；
+                </br></br>5、在新增注意事项文本的时候，新增模板字段不支持自动换行，需要手动调整，一般字号为14的时候，和效果图中字体大小一样。
+                </br></br>6、当模板需要整体移动的时候，可以通过模板的【偏移】来调整整体移动，使其位置正确。如：X轴为-3，那么模板就整体往做移动3毫米，X轴为5，模板就整体向右移动5毫米，上下移动同样调整Y轴来实现。
+
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_64.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong>短信管理</strong>
+                </br></br>短信管理是管理公司的短信功能，主要内容有：管理编辑短信模板，查看短信发送历史，编辑自动发送短信的计划；此处主要介绍设置短信模板的方法和步骤。
+                </br></br>1、发送短信可以在功能界面发送短信，也可以在短信功能里面发送短信，在发送短信之前，必须要设置公司特有的短信模板；
+                </br></br>2、系统里面初始有对应的相关模板，系统的模板也可以进行修改；
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_65.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                </br></br>3、修改模板时，需要注意系统里面的可用字段必须选择设置的字段，如：运单号等随运单的变化而变化的字段就必须选择系统设置的格式字段，其他的文字可以手工添加上去就行。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_66.png" class="img-fluid" alt="feature1" />
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main>
+    </div>
+</div>
+
+<hr>
+<%include ../include/footer.html %>
+</body>
+
+
+</html>

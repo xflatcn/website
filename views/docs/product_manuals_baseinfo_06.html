@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<head xmlns="http://www.w3.org/1999/html">
+    <title>系统设置-APP365第三方物流系统</title>
+    <%include ../include/head_res.html %>
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/assets/css/docs.min.css" rel="stylesheet"/>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-146052-10', 'getbootstrap.com');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body>
+<%include ../include/top_nav.html %>
+
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+                </button>
+            </form>
+
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_start.html">
+                        开始使用
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_order.html">
+                        订单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_dispatch.html">
+                        车辆调度
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_track.html">
+                        跟踪
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_return.html">
+                        回单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_finance_01.html">
+                        财务管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_abnormal.html">
+                        异常件
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_analysis.html">
+                        经营分析
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_query.html">
+                        查询
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_service.html">
+                        客服
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                        基础资料
+                    </a>
+                    <ul style="list-style: none;font-size: 15px">
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                            1、人与组织
+                        </a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_02.html">
+                            2、商品设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_03.html">
+                            3、运输设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_04.html">
+                            4、运价管理</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_05.html">
+                            5、财务设置</a></li>
+                        <li><a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_baseinfo_06.html">
+                            6、系统设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_07.html">
+                            7、网站维护</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_08.html">
+                            8、工具及维护</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#one">权限设置</a></li>
+                <li class="toc-entry toc-h2"><a href="#two">个人信息</a></li>
+                <li class="toc-entry toc-h2"><a href="#three">公司信息</a></li>
+                <li class="toc-entry toc-h2"><a href="#four">系统参数</a></li>
+                <li class="toc-entry toc-h2"><a href="#five">登录认证</a></li>
+                <li class="toc-entry toc-h2"><a href="#six">设备配置</a></li>
+            </ul>
+        </div>
+
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" role="main">
+
+            <h4 style="margin-bottom: 20px;margin-top: 30px" >
+                系统设置
+            </h4>
+            <p>
+                系统设置包含设置和系统工具，系统管理员根据公司的需求对系统进行管理设置，也相当于系统管理员在系统中管理公司级员工的一个权限。
+                </br></br>1、设置中包含系统设置、应用设置和网站维护，在设置中比较重要的设置是权限设置、系统参数、设备配置及网站维护的功能；
+                </br></br>2、权限设置是系统管理员管理员工的权限；
+                </br></br>3、系统参数是系统管理员设置系统的工具；
+                </br></br>4、设备配置是设置连接系统的打印运单和打印标签的打印机及打印模板设置；
+                </br></br>5、网站维护是系统管理员设置，维护与物流系统相关网站，及网站的内容更新，发布；
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_47.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong id="one">权限设置</strong>
+                </br></br>1、权限设置有两个功能：一直给员工授权，二是增加系统操作的角色；此功能很重要，一般只能系统管理员操作；
+                </br></br>2、权限设置是系统管理员管理员工的权限，这是公司在系统中管理员工的唯一权利，系统管理员根据员工不同的角色分配不同的访问系统的权限，从而在系统中给员工不同的分工；
+                </br></br>3、步骤：设置→权限设置→选择授权对象→选择授予权限→保存。
+                </br></br>4、在角色编辑中，一次可以选择多个员工进行授权；
+                </br></br>5、权限系统管理可以自己在系统里面增加不同的权限角色；
+                </br></br>6、在分配到该角色用户框中，只需将可用用户添加到已选用户，即可进行角色授权了。删除则按相反的方法。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_48.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                </br></br>7、在授权的时候，只需根据公司分配的角色任务，勾选访问内容，然后点击保存即可；
+                </br></br>8、对员工授权保存之后，需要被授权的账号注销系统登陆之后，重新登陆才生效。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_49.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong id="two">个人信息</strong>
+                </br></br>1、个人信息显示是当前登录人的信息。
+                </br></br>2、可以在此功能里面，修改自己的密码。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_50.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong id="three">公司信息</strong>
+                </br></br>1、公司信息显示的是当前登录网点公司信息。
+                </br></br>2、此功能可以修改公司名称，联系人等等，修改之后，在系统下一次登陆生效。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_51.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong id="four">系统参数</strong>
+                </br></br>1、系统参数设置是系统管理员管理系统的设置，系统管理员根据公司的情况，在系统中进行更改设置。
+                </br></br><strong style="color: red"> 2、系统参数可以设置系统自动中转，自动计算运费，自动生成单号，控制随便填写客户资料，服务商，司机等等；具体的参数设置含义都在对应的设置后面有具体的说明；</strong>
+                </br></br>3、系统参数里面的系统版本，必须设置为V3版本，V1版本为第三方历史版本；
+                </br></br>4、运单和标签模板可以进行选择系统中的模板，关于模板的设计，将在【工具】中的【模板管理】进行讲解；
+                </br></br>5、步骤：设置→系统参数→选择→保存。
+                </br></br>6、系统参数设置保存以后，需要系统注销登陆，再次登陆才生效。
+
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_52.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p style="margin-top: 20px">
+                <strong id="five">登陆认证</strong>
+                </br></br>登录认证是公司控制系统电脑登录权限，系统在电脑登录的时候，必须申请，经过公司同意后才能登录系统。
+
+            </p>
+
+            <p>
+                <strong id="six">设备配置</strong>
+                </br></br><strong style="color: red">1、设备配置主要是安装打印插件，设置打印机和打印的模板；只要是需要系统打印，必须安装打印插件。</strong>
+                </br></br>2、安装打印插件。浏览器本身是不支持其他的插件，需要安装打印插件才能进行打印机的连接。刚注册系统打开运单录入界面，系统会提示“未安装打印插件”的提示；
+                </br></br>3、安装步骤：打开设备配置->选择插件类型，选择LODOP的插件类型->系统页面自动刷新，提示下载32位的还是64位的插件->查看电脑操作系统的位数->下载插件->打开插件安装包，进行插件安装并启动->提示插件安装成功并启动->刷新页面即可。
+                </br></br>4、或打开公司主页www.app365.com：支持>>产品问答>>怎样安装打印插件；
+                </br></br>5、已安装打印插件的电脑则不需要第二次安装。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_53.png" class="img-fluid" alt="feature1" />
+            </div>
+
+
+        </main>
+    </div>
+</div>
+
+<hr>
+<%include ../include/footer.html %>
+</body>
+
+
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<head>
+    <title>Open_api</title>
+    <%include include/head_res.html %>
+    <link rel="stylesheet" href="/css/baseStyle.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/bootstrap.css" type="text/css"/>
+</head>
+<body>
+<%include include/top_nav.html %>
+<div class="testimonials-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-11 ">
+                <h2>APP365 Open API 开发指南</h2>
+                <p>APP365提供的Open API是典型的RESTful API，让你能非常容易地将自己的应用与APP365进行集成；
+                    你可以在应用程序中按照自己的需要查询或修改运单、车辆、车次、客户、司机、出入库信息、运输过程信息、跟踪信息、财务信息等；
+                    APP365 Open API采用JSON作为请求和响应的数据格式。
+                </p>
+                <p>在你考虑自己创建与APP365集成的模块时，请先检查“插件工具”栏目中是否已经提供了相同的模块，以免重复劳动。</p>
+                </br>
+                <h2>获取API认证许可</h2>
+                <h3>概述</h3>
+                <p>当前的APP365 Open API 仅支持HTTP Basic access authentication认证方式；API调用连接必须通过安全的HTTPS连接；证书信息由一个有效的用户名和其关联的API Key组成；
+                    请参见下节的“启用 APP365 Open API”，以了解怎样获取一个API Key；在调用时，如果证书无效或者没有提供，服务器会返回“401未经授权”的响应。</p>
+                </br>
+                <h3>为用户启用 APP365 Open API</h3>
+                <p>要授权一个用户让其可以调用API，请按照下列步骤操作：</p>
+                <ul class="list-arrow-18">
+                    <li>进入物流系统，选择菜单项：基础设置->个人资料</li>
+                    <li>在出现的界面底部的“登录信息”栏目中，点击“API Key”旁边的“生成”按钮，即可生成一个32位的Key</li>
+                    <li>点击整个界面上方的“保存”按钮，保存相关信息</li>
+                    <li>请注意，APP365中调用API需要提供Client ID到服务器端进行调用，请同时记下API Key下方的Client ID</li>
+                </ul>
+
+                <!--<img src="/images/app365/personal-info.jpg" style="height: auto;width: auto" >-->
+
+                <div class="col-md-12 text-center">
+                    <img src="/images/app365/personal-info.jpg" class="img-fluid" alt="feature1" />
+                </div>
+                </br></br>
+                <h3>配置权限</h3>
+                <p>在角色模块中，配置指定角色能够存取的资源和可以执行的动作，让特定的角色只能访问与自己相关的资源和动作，保证系统数据的安全。
+                    在调用API时，采用同样地策略来控制用户的访问权限，如果用户无权访问指定的资源，则会返回响应 “403 Forbidden”。</p>
+                </br>
+                <h2>发起服务调用请求</h2>
+                <h3>登录授权</h3>
+                <p>要调用APP365 API，你需要在执行请求时，设置Basic HTTP Authorization头部：username:api_key.</p>
+                <p>如果使用cURL工具，你可以采用下面两种方式之一请求登录授权：</p>
+
+                通过"--user"参数构造登录授权的头部
+                <p style="background: #28a745">curl --user apiUsername:api_key</p>
+
+                通过"--header"参数直接设置登录授权的头部
+                <p style="background: #28a745">curl --header "Authorization: Basic YWRtaW46WW91ckFQSUtleUhlcmU="</p>
+                </br>
+                <h3>服务调用</h3>
+                <p>APP365 Open API采用JSON作为请求和响应的数据格式，API分为三种类型，查询数据、保存数据、删除数据：</p>
+
+                <p style="font-size: 15px;font-weight: bold">查询数据</p>
+                <div style="display: block;padding: 9.5px;margin: 0 0 10px;font-size: 13px;color: #333;background-color: #f5f5f5;border: 1px solid #ccc;border-radius: 4px;">
+                    <p style="font-size: 14px;font-weight: bold">查找单条记录URL：<strong>http://biz.app365.com/bizweb/services/bizobjects</strong></p>
+                        /m56.Barcode /* 实体模型id */</br>
+                        /{id}?fields=station_name,barcodes /* 记录id及其要查询返回的字段列表*/</br></br>
+                    <p style="font-size: 14px;font-weight: bold">查询列表URL: <strong>http://biz.app365.com/bizweb/services/query</strong></p>
+                    /ilms.LmsOrder.selectForList /* 要执行的SqlId */</br>
+                    /"o.name": 'lgh', "o.code": 'fff'/0,100 /* 查询条件参数，查询记录的offset limit*/</br></br>
+                    <p style="font-size: 14px;font-weight: bold">完整的请求举例：</p>
+                    curl --request GET \</br>
+                        --header "Authorization: Basic YWRtaW46WW91ckFQSUtleUhlcmU=" \</br>
+                    http://biz.app365.com/bizweb/services/bizobjects/m56.Barcode/{id}?fields=station_name,barcodes</br>
+
+                    curl --request GET \</br>
+                     --header "Authorization: Basic YWRtaW46WW91ckFQSUtleUhlcmU=" \</br>
+                    http://biz.app365.com/bizweb/services/query/ilms.LmsOrder.selectForList/ \</br>
+                    "o.name": 'lgh', "o.code": 'fff'/0,100</br>
+                </div>
+                </br>
+                <p style="font-size: 15px;font-weight: bold">保存数据</p>
+                    <div style="display: block;padding: 9.5px;margin: 0 0 10px;font-size: 13px;color: #333;background-color: #f5f5f5;border: 1px solid #ccc;border-radius: 4px;">
+                    <p style="font-size: 14px;font-weight: bold">保存整个对象的URL: http://biz.app365.com/bizweb/services/bizobjects/m56.Barcode/，同时post一个json对象</p>
+                    <p style="font-size: 14px;font-weight: bold">更新几个字段的URL：http://biz.app365.com/bizweb/services/bizobjects/m56.Barcode/{id}，同时post一个json对象</p>
+                    <p style="font-size: 14px;font-weight: bold">完整的请求举例:</p>
+                            curl http://biz.app365.com/bizweb/services/bizobjects/m56.Barcode/</br>
+                                -H "Content-Type: application/json" -d @barcode.json</br>
+                                -H "Authorization: Basic YWRtaW46WW91ckFQSUtleUhlcmU="
+                    </br>
+                </div>
+                </br>
+                <h2>服务响应</h2>
+                <p>APP365 API根据请求的结果，返回相应的HTTP状态代码。根据HTTP的规定，响应按照下列状态码性质被分成几大类。出错的响应中也同时包含了一个错误消息在响应的body中，你可以根据这个消息判断和解决问题。</p>
+                <h3 style="color: #777;">2xx 调用成功</h3>
+                <div class="table-wrap">
+                    <table class="confluenceTable"><tbody>
+                    <tr>
+                        <th class="confluenceTh"> Code </th>
+                        <th class="confluenceTh"> Definition </th>
+                        <th class="confluenceTh"> Purpose </th>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 200 </td>
+                        <td class="confluenceTd"> OK </td>
+                        <td class="confluenceTd"> For successful GET/PUT requests. </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 201 </td>
+                        <td class="confluenceTd"> Created </td>
+                        <td class="confluenceTd"> For a successful POST request. </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 202 </td>
+                        <td class="confluenceTd"> Accepted </td>
+                        <td class="confluenceTd"> For a request that resulted in a scheduled task being created to perform the actual request. </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 204 <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> No Content <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> For a successful request that produced no response (such as DELETE requests). <br class="atl-forced-newline"> </td>
+                    </tr>
+                    </tbody></table>
+                </div>
+                </br>
+                <h3 style="color: #777;">3xx 重定向</h3>
+                <div class="table-wrap">
+                    <table class="confluenceTable"><tbody>
+                    <tr>
+                        <th class="confluenceTh"> Code </th>
+                        <th class="confluenceTh"> Definition </th>
+                        <th class="confluenceTh"> Purpose </th>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 301 </td>
+                        <td class="confluenceTd"> Moved Permanently </td>
+                        <td class="confluenceTd"> When the API routes have changed (unlikely) or if the incoming request is not secure (http) then it will be redirect to the secure (https) version. </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 302 <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> Found <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> When the resource was found at a different location. When a request to a deprecated version of the API is received, a 302 Found response will be issued to the current API version. <br class="atl-forced-newline"> </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 304 <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> Not Modified <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> If an If-Modified-Since header is sent in the request and the resource has not been modified since the specified date, then this response will be sent. NB. See resource specific pages for support for the If-Modified-Since header. <br class="atl-forced-newline"> </td>
+                    </tr>
+                    </tbody></table>
+                </div>
+                </br>
+                <h3 style="color: #777;">4xx 客户端出错</h3>
+                <div class="table-wrap">
+                    <table class="confluenceTable"><tbody>
+                    <tr>
+                        <th class="confluenceTh"> Code </th>
+                        <th class="confluenceTh"> Definition </th>
+                        <th class="confluenceTh"> Purpose </th>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 400 <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> Bad Request <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> Issued when a malformed request was sent. Such as due to invalid syntax or missing required data. <br class="atl-forced-newline"> </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 401 <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> Unauthorized <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> This response is sent when either the clients credentials are not provided or are incorrect. <br class="atl-forced-newline"> </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 403 <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> Forbidden <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> When the user doesn't have permission to perform a specific operation on a resource (eg. edit a product). Permissions can be set through the store control panel. <br class="atl-forced-newline"> </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 404 </td>
+                        <td class="confluenceTd"> Not Found </td>
+                        <td class="confluenceTd"> When a particular resource doesn't exist or couldn't be found. </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 405 <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> Method Not Allowed <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> The resource was found, but doesn't support the request method. Issued when either a specific method isn't yet implemented on a resource, or the resource doesn't support the method at all (eg. PUT on /orders is invalid, but PUT on /orders/{id} is valid). <br class="atl-forced-newline"> </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 406 <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> Not Acceptable <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> When the client specifies a response content type in the Accept header that is not supported. <br class="atl-forced-newline"> </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 409 </td>
+                        <td class="confluenceTd"> Conflict </td>
+                        <td class="confluenceTd"> A change requested by the client is being rejected due to a condition imposed by the server. The exact reasons response for this will vary from one resource to the next. Examples may include attempting to delete a Category which would result in Products being orphaned. Additional information about the conflict and how to resolve it may be available in the <tt>details</tt> section of the response. </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 413 <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> Request Entity Too Large <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> When the client requests too many objects. eg. the&nbsp;<b>limit</b> parameter was above the maximum allowed. <br class="atl-forced-newline"> </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 415 <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> Unsupported Media Type <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> When the client specifies a content type in the Content-Type header that is not supported by the API. <br class="atl-forced-newline"> </td>
+                    </tr>
+                    </tbody></table>
+                </div>
+                </br>
+                <h3 style="color: #777;">5xx 服务端出错</h3>
+                <div class="table-wrap">
+                    <table class="confluenceTable"><tbody>
+                    <tr>
+                        <th class="confluenceTh"> Code </th>
+                        <th class="confluenceTh"> Definition </th>
+                        <th class="confluenceTh"> Purpose </th>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 500 </td>
+                        <td class="confluenceTd"> Internal Server Error </td>
+                        <td class="confluenceTd"> When an error has occurred within the API. </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 501 </td>
+                        <td class="confluenceTd"> Not Implemented </td>
+                        <td class="confluenceTd"> When a request method is sent that is not supported by the API (eg. TRACE, PATCH). </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 503 <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> Service Unavailable <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> When the store is marked as "Down for Maintenance" or the store is being upgraded to a new version. <br class="atl-forced-newline"> </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 507 <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> Insufficient Storage <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> When the store has reached a limitation for the resource according to their BigCommerce plan (eg 500 product limit). <br class="atl-forced-newline"> </td>
+                    </tr>
+                    <tr>
+                        <td class="confluenceTd"> 509 <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> Bandwidth Limit Exceeded <br class="atl-forced-newline"> </td>
+                        <td class="confluenceTd"> When the requests-per-hour limitations for the API have been reached. <br class="atl-forced-newline"> </td>
+                    </tr>
+                    </tbody></table>
+                </div>
+                </br></br>
+                <hr>
+
+            </div>
+        </div>
+    </div>
+</div>
+<%include include/footer.html %>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<head xmlns="http://www.w3.org/1999/html">
+    <title>开票与结算-费用结算-收款结算-付款结算-开票结算-提现-存现-转账-财务管理-APP365第三方物流系统</title>
+    <%include ../include/head_res.html %>
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/assets/css/docs.min.css" rel="stylesheet"/>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-146052-10', 'getbootstrap.com');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body>
+<%include ../include/top_nav.html %>
+
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+                </button>
+            </form>
+
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_start.html">
+                        开始使用
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_order.html">
+                        订单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_dispatch.html">
+                        车辆调度
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_track.html">
+                        跟踪
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_return.html">
+                        回单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_finance_01.html">
+                        财务管理
+                    </a>
+                    <ul style="list-style: none;font-size: 15px">
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_finance_01.html">
+                            1、计费与对账
+                        </a></li>
+                        <li><a style="font-weight: bold" class="bd-toc-link active" href="/docs/product_manuals_finance_02.html">
+                            2、开票与结算</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_finance_03.html">
+                            3、油卡管理</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_finance_04.html">
+                            4、财务查询</a></li>
+                    </ul>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_abnormal.html">
+                        异常件
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_analysis.html">
+                        经营分析
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_query.html">
+                        查询
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_service.html">
+                        客服
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_baseinfo.html">
+                        基础资料
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#nine">费用结算</a></li>
+                <li class="toc-entry toc-h2"><a href="#ten">收款结算</a></li>
+                <li class="toc-entry toc-h2"><a href="#eleven">付款结算</a></li>
+                <li class="toc-entry toc-h2"><a href="#twele">开票结算</a></li>
+                <li class="toc-entry toc-h2"><a href="#thirteen">提现/存现/转账</a></li>
+            </ul>
+        </div>
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" role="main">
+
+            <h4 id="nine" style="margin-bottom: 40px;margin-top: 30px" >
+                费用结算
+            </h4>
+            <p>
+                费用结算是结算财务费用，费用结算一般是公司出纳操作的功能，在费用结算时，可以选择结算的账户，方便 管理公司的账户。
+                </br></br><strong style="color: red;">1、费用结算之后，每一笔结算的记录都会生成一个结算编号，后续可以通过结算编号查询结算记录；</strong>
+                </br></br>2、结算的时候，可以选择使用不同的查询条件进行查询运单或费用项目进行结算；
+                </br></br>3、已经对账的运单，可以输入对账单编号进行查询已经对账的运单，从而进行批量结算。
+                </br></br><strong style="color: red;">4、费用结算是针对费用项目进行结算，在结算的时候，可以将费用分次结算。</strong>
+                </br></br>5、费用结算操作流程：费用结算->选择需要结算的费用项目->点击结算按钮，进入结算界面->确认结算的金额->选择结算账户->保存（财务状态更新为结算中）->确认（财务状态更新为已结算）
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_18.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="ten" style="margin-bottom: 40px;margin-top: 50px" >
+                收款结算
+            </h4>
+            1、收款结算是结算收入费用，结算在运单录入的时候，应收客户费用；
+            </br></br>2、费用结算一般是公司出纳操作的功能，在费用结算时，可以选择结算的账户，方便管理公司的账户。
+            </br></br><strong style="color: red">3、费用结算之后，每一笔结算的记录都会生成一个结算编号，后续可以通过结算编号查询结算记录；
+            </br></br>4、收款结算是针对运单进行结算，在结算的时候，可以将运单收入费用分次结算。
+        </strong>
+            </br></br>5、已经对账的运单，可以输入对账单编号进行查询已经对账的运单，从而进行批量结算。
+            </br></br>6、收款结算操作流程：收款结算->选择需要结算的运单->点击结算按钮，进入结算界面->确认结算的金额->选择结算账户->保存（财务状态更新为结算中）->确认（财务状态更新为已结算）
+
+            <h4 id="eleven" style="margin-bottom: 40px;margin-top: 50px" >
+                付款结算
+            </h4>
+            <p>
+                1、付款结算为结算服务商、司机等所有的支出费用结算；
+                </br></br>2、付款结算业务支出有：干线派车业务费用、提货业务支出费用、送货和送货中转业务支出费用、中转外包业务支出费用和其他支出费用的结算；
+                </br></br>3、操作方法同收款结算。
+                </br></br>4、付款结算操作流程：付款结算->选择需要结算的运单或业务->点击结算按钮，进入结算界面->确认结算的金额->选择结算账户->保存（财务状态更新为结算中）->确认（财务状态更新为已结算）
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_19.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="twele" style="margin-bottom: 40px;margin-top: 50px" >
+                开票结算
+            </h4>
+            <p>
+                1、开票结算分为两部分：一是账单开票，二是开票结算；
+                </br></br>2、账单开票：必须是在账单已经上报开票的状态下，才能进行开票的操作；在开票的时候，可以选择开票的类型和开票项目等等；
+                </br></br>3、开票结算的时候，可以针对一张对账单开多张发票；开票的金额由运单的金额汇总自动带入开票金额。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_20.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                </br></br>4、开票结算列表内，需要操作确认开票和确认结算；只有确认开票之后，才能进行确认结算的操作；
+                </br></br>5、在确认开票的时候，可以高拍仪将发票图片上传到系统备案；
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_21.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <h4 id="thirteen" style="margin-bottom: 40px;margin-top: 50px" >
+                提现/存现/转账
+            </h4>
+            <p>
+                提现/存现/转账是针对公司内部账号之间的账户账目金额的互转，只能针对公司账户的操作。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/finance_22.png" class="img-fluid" alt="feature1" />
+            </div>
+
+        </main>
+    </div>
+</div>
+
+<hr>
+<%include ../include/footer.html %>
+</body>
+
+
+</html>

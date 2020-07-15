@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%include include/head_res.html %>
+</head>
+<body>
+
+  <%include include/top_nav.html %>
+
+  <div class="contact-us-map">
+    <div class="container">
+      <div class="location d-none d-md-block">
+        <h5>React Headquarters</h5>
+        <p>10th Main Street 12/3 4580, 10th Floor, San Francisco, Ca.</p>
+      </div>
+    </div>
+    <div id="map"></div>
+  </div>
+
+  <div class="contact-us-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 message">
+          <h3>Send us a message</h3>
+          <p>
+            You can contact us with anything related to React. <br/> We'll get in touch with you as soon as possible.
+          </p>
+          <form role="form" id="contact-form" method="post">
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input type="text" name="name" class="form-control" id="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" name="email" class="form-control" id="email" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="text" name="phone" class="form-control" id="phone" />
+            </div>
+            <div class="form-group">
+              <label for="message">Your message</label>
+              <textarea name="message" class="form-control" id="message" rows="6"></textarea>
+            </div>
+            <div class="submit">
+              <input type="submit" class="button button-small" value="Email us" />
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-4 contact">
+          <div class="address">
+            <h3>Our Address</h3>
+            <p>
+              The Old Road Willington, <br />
+              7 Kings Road, <br />
+              Southshore, 64890
+            </p>
+          </div>
+          <div class="phone">
+            <h3>By Phone</h3>
+            <p>
+              1-800-346-3344
+            </p>
+          </div>
+          <div class="online-support">
+            <strong>Looking for online support?</strong>
+            <p>
+              Talk to us now with our online chat
+            </p>
+          </div>
+          <div class="social">
+            <a href="#" class="fb"><img src="images/social/fb.png" alt="facebook" /></a>
+            <a href="#" class="tw"><img src="images/social/tw.png" alt="twitter" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 menu">
+          <h3>Overview</h3>
+          <ul>
+            <li>
+              <a href="features.html">Features</a>
+            </li>
+            <li>
+              <a href="services.html">Services</a>
+            </li>
+            <li>
+              <a href="pricing.html">Pricing</a>
+            </li>
+            <li>
+              <a href="support.html">Support</a>
+            </li>
+            <li>
+              <a href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="blog.html">Coming soon</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 menu">
+          <h3>Menu</h3>
+          <ul>
+            <li>
+              <a href="features.html">About us</a>
+            </li>
+            <li>
+              <a href="services.html">Contact us</a>
+            </li>
+            <li>
+              <a href="aboutus.html">Jobs</a>
+              <a href="aboutus.html" class="hiring">
+                We're hiring!
+              </a>
+            </li>
+            <li>
+              <a href="support.html">Portfolio</a>
+            </li>
+            <li>
+              <a href="blog.html">Status</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2 menu">
+          <h3>Social</h3>
+          <ul>
+            <li>
+              <a href="features.html">Youtube</a>
+            </li>
+            <li>
+              <a href="services.html">Facebook</a>
+            </li>
+            <li>
+              <a href="pricing.html">Twitter</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 newsletter">
+          <div class="signup clearfix">
+            <p>
+              Sign up for the newsletter and we'll inform you of updates, offers and more.
+            </p>
+            <form>
+              <input type="text" name="email" class="form-control" placeholder="Your email address" />
+              <input type="submit" value="Sign up" />
+            </form>
+          </div>
+          <a href="#">
+            <img src="images/social/social-tw.png" alt="twitter" />
+          </a>
+          <a href="#">
+            <img src="images/social/social-dbl.png" alt="dribbble" />
+          </a>
+        </div>
+      </div>
+      <div class="credits">
+        <p>Copyright © 2019. React</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(function () {
+      // Google maps
+      var mapLocation = new google.maps.LatLng(32.689593,-117.18039);
+
+      map = new GMaps({
+        streetViewControl : false,
+        overviewMapControl: false,
+        mapTypeControl: false,
+        panControl : false,
+        scrollwheel: false,
+        center: mapLocation,
+        el: '#map',
+        zoom: 15,
+        styles: [
+        {
+          "featureType":"landscape",
+          "stylers":[
+          {"saturation":-100},
+          {"lightness":65},
+          {"visibility":"on"}
+          ]
+        },
+        {
+          "featureType":"poi",
+          "stylers":[
+          {"saturation":-100},
+          {"lightness":51},
+          {"visibility":"simplified"}
+          ]
+        },
+        {
+          "featureType":"road.highway",
+          "stylers":[
+          {"saturation":-100},
+          {"visibility":"simplified"}
+          ]
+        },
+        {
+          "featureType":"road.arterial",
+          "stylers":[
+          {"saturation":-100},
+          {"lightness":30},
+          {"visibility":"on"}
+          ]
+        },
+        {
+          "featureType":"road.local",
+          "stylers":[
+          {"saturation":-100},
+          {"lightness":40},
+          {"visibility":"on"}
+          ]
+        },
+        {
+          "featureType":"transit",
+          "stylers":[
+          {"saturation":-100},
+          {"visibility":"simplified"}
+          ]
+        },
+        {
+          "featureType":"administrative.province",
+          "stylers":[
+          {"visibility":"off"}
+          ]
+        },
+        {
+          "featureType":"water",
+          "elementType":"labels",
+          "stylers":[
+          {"visibility":"on"},
+          {"lightness":-25},
+          {"saturation":-100}
+          ]
+        }
+        ]
+      });
+
+      map.addMarker({
+        position: mapLocation,
+        icon: 'images/map-icon.png'
+      });
+
+    });
+  </script>
+</body>
+</html>

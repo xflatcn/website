@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>问答详情</title>
+    <%include include/head_res.html %>
+    <link rel="stylesheet" href="/css/baseStyle.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/bootstrap.css" type="text/css"/>
+</head>
+<body><!--自适应图片 class="img-fluid"-->
+<%include include/top_nav.html %>
+<div class="features-tabs-section">
+    <div class="container">
+    <h3><%= data.title%></h3>
+    <%- data.txt %>
+    </div>
+</div>
+<hr>
+<%include include/footer.html %>
+</body>
+</html>

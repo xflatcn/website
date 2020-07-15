@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<head xmlns="http://www.w3.org/1999/html">
+    <title>运价管理-APP365第三方物流系统</title>
+    <%include ../include/head_res.html %>
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/assets/css/docs.min.css" rel="stylesheet"/>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-146052-10', 'getbootstrap.com');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body>
+<%include ../include/top_nav.html %>
+
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+                </button>
+            </form>
+
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_start.html">
+                        开始使用
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_order.html">
+                        订单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_dispatch.html">
+                        车辆调度
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_track.html">
+                        跟踪
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_return.html">
+                        回单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_finance_01.html">
+                        财务管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_abnormal.html">
+                        异常件
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_analysis.html">
+                        经营分析
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_query.html">
+                        查询
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_service.html">
+                        客服
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                        基础资料
+                    </a>
+                    <ul style="list-style: none;font-size: 15px">
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                            1、人与组织
+                        </a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_02.html">
+                            2、商品设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_03.html">
+                            3、运输设置</a></li>
+                        <li><a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_baseinfo_04.html">
+                            4、运价管理</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_05.html">
+                            5、财务设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_06.html">
+                            6、系统设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_07.html">
+                            7、网站维护</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_08.html">
+                            8、工具及维护</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#one">计费地点</a></li>
+                <li class="toc-entry toc-h2"><a href="#two">运价方案</a></li>
+                <li class="toc-entry toc-h2"><a href="#three">客户报价方案</a></li>
+                <li class="toc-entry toc-h2"><a href="#four">司机报价方案</a></li>
+                <li class="toc-entry toc-h2"><a href="#five">服务商报价方案</a></li>
+                <li class="toc-entry toc-h2"><a href="#six">客户报价</a></li>
+                <li class="toc-entry toc-h2"><a href="#seven">服务商报价</a></li>
+                <li class="toc-entry toc-h2"><a href="#eight">司机报价</a></li>
+                <li class="toc-entry toc-h2"><a href="#nine">发车指导价</a></li>
+                <li class="toc-entry toc-h2"><a href="#ten">公共费率</a></li>
+            </ul>
+        </div>
+
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" role="main">
+
+            <h4 style="margin-bottom: 20px;margin-top: 30px" >
+                运价管理
+            </h4>
+            <p>
+                <strong id="one">计费地点</strong></br></br>
+                1、计费地点维护是维护当运价体系的地点不能与系统的标准地点相匹配的时候，系统通过设置计费地点，将客户运价地点与系统标准地点进行匹配的设置，从而达到客户提供的地点在系统里面进行费用计算。
+                </br></br>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_40.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong id="two">运价方案</strong>
+                </br></br>1、运价方案：运价体系报价比较复杂，一是对不同的商品（重量、体积、商品型号），不同的线路距离（城市）和不同的商家进行的客户报价；二是对不同的车型，不同的车辆性质和不同的司机进行的司机报价；三是对不同的服务商进行不同的商品（重量、体积、商品型号），不同的线路距离和不同的商家进行的服务商报价。
+                </br></br>2、设置运价方案的目的地是为公司解决复杂的运价体系，当公司存在多种运价体系的时候，单靠简单的运价计算根本解决不了复杂的运价，所以只有针对每一种价格体系设置一种方案，才能准确无误的解决计算运价的问题。
+                </br></br>3、设置运价方案后，用于在设置报价的时候，选择对应的运价方案进行设置费率。设置运价方案一定要选择方案的类型，方案的类型有客户报价方案、服务商报价方案、司机报价方案。客户报价方案是用于设置客户报价的；服务商报价方案是用于设置服务商报价的；司机报价方案是用于设置司机报价的。
+                </br></br>4、编号是运价字段的编号排序，点击选择即可；
+                </br></br>5、字段名称是计费的名称，需要根据公司的价格体系填写报价名称。
+                </br></br>
+            </p>
+
+            <p>
+                <strong id="three">客户报价方案</strong>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_41.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong id="four">司机报价方案</strong>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_42.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong id="five">服务商报价方案</strong>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_43.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong id="six">客户报价</strong>
+                </br></br>1、客户报价是设置网点收客户的报价费率；用于公司按照设置收客户的费用标准，计算应收客户的费用（收货网点向客户收取的价格费率）；
+                <strong style="color: red"> </br></br>2、客户报价用于维护公司标准收货价或大客户、项目客户、合同客户的和合同计价规则或计费标准，以便于系统自动计算应收客户的运费；
+                    </br></br>3、客户报价功能可维护应收客户的运费、提货费、送货费；
+                    </br></br>4、客户报价支持计费模式有：重量、体积、重量体积取大、重量体积取小、件数、吨公里、公斤公里、整车送、整车回、整车来回、区分重泡货，重货按重量计费、泡货按体积计费、整车多点配送按最远距离计费、按天累计体积计费等等；
+                </strong></br></br>5、客户报价用于在运单录入回客户下单时，自动计算应收客户的运费，提货费，送货费。
+
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_44.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br>5、所属网点：可以针对某一个网点进行设置价格，当所属网点选择为【公共】的时候，表示设置的运价适用于公司所有的网点；
+                </br></br>6、运价方案：是当公司的计费费率是比较复杂的费率体系，系统需要选择事先在运价方案中维护的对应【客户运价方案】，来用于计费的维护；
+                </br></br>7、计费方式：是设置计算费率的方式，系统设置计费方式有：重量（kg/t），体积，重量体积取大/取小，件数、吨公里、公斤公里、整车送、整车回、整车来回等等以及选择维护运费、提货费或送货费；
+                </br></br>8、计费单位：是设置计算费率的单位，必须和前面的计费方式对应；
+                </br></br>9、报价对象：可以维护设置针对不同的客户有不同报价，报价对象需要选择对应维护的客户资料里面的客户名称，当报价对象选择为【公共】的时候，表示此报价适用于所有的客户；
+                </br></br>10、计方重量是进行重量体积的转换，以及区分重泡比的参数值设置；
+                </br></br>11、重量费率表示按照重量计算的运价；
+                </br></br>12、体积费率表示按照体积计算的费率；
+                </br></br>13、起点数量和起点费率是最低计算的数量和最低收费；
+                </br></br>14、生效时间和失效时间：指的是维护的报价的生效和失效时间，必须要设置失效日期，要不然设置的时间就没有生效。
+                </br></br>15、数量1、费率1，数量2、费率2表示按照阶段计算费用，如：数量1为：5kg，费率1为0.5元，数量2为10kg，费率2为0.4元，数量1费率1则表示1至5公斤按照0.5元/公斤计算，数量2费率2则表示5至10公斤按照0.4元/公斤计算费率；
+                </br></br>16、设置的重量费率体积费率，那么后面的数量1、2、3就没有作用；（重量体积费率和数量费率只能设置一个）
+            </p>
+
+            <p>
+                <strong id="seven">服务商报价</strong>
+                </br></br>1、服务商报价是维护网点对外包服务商的报价；
+                </br></br>1、服务商报价是设置运单实际转货城市至运单目的地的费率，是物流公司付给中转服务商的价格。
+                <strong style="color: red"> </br></br>2、服务商报价功能可维护应付给服务商的运费、提货费、送货费；
+                    </br></br>3、服务商报价支持计费模式有：重量、体积、重量体积取大、重量体积取小、件数、吨公里、公斤公里、整车送、整车回、整车来回、区分重泡货，重货按重量计费、泡货按体积计费、整车多点配送按最远距离计费、按天累计体积计费等等；</strong>
+                </br></br>4、客户报价用于在运单录入回客户下单时，自动计算应收客户的运费，提货费，送货费。
+                </br></br>5、服务商报价用于中转外包功能的自动计算应付给中转服务商的中转费计算。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_44.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong id="eight">司机报价</strong>
+                </br></br>1、司机运价是维护公司支付给运输司机的费率；
+                </br></br>2、司机报价不论是公司自有车或外请车，只要是业务运输的司机，都可以设置报价进行司机运费的计算；
+                <strong style="color: red"> </br></br>3、司机报价支持计费模式有：重量、体积、重量体积取大、重量体积取小、件数、吨公里、公斤公里、整车送、整车回、整车来回、区分重泡货，重货按重量计费、泡货按体积计费、整车多点配送按最远距离计费、按天累计体积计费等等；
+                </strong>
+                </br></br>4、维护司机报价的方法和维护客户报价的操作方法以及字段的含义都是一致的。
+                </br></br>5、司机报价用于调度派车，提货调度，送货调度功能模块的自动计算司机运费。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_45.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                <strong id="nine">发车指导价</strong>
+                </br></br>1、发车指导价是维护车辆起运城市至目的城市的参考价格，相当于维护车次的起运城市到目的城市的参考标准价格；
+                </br></br>2、发车指导价不作为司机运输费率的计算，只适用于调度派车的时候，计算车辆起运城市至目的地城市之间的参考价格，此价格为网点的参考报价，最终以实际收取的报价为准。
+                </br></br>3、发车指导价用于调度派车的时候，系统自动计算预估费用。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_46.png" class="img-fluid" alt="feature1" />
+            </div>
+            <p>
+                <strong id="ten">公共费率</strong>
+                </br></br>1、公共费率是设置当公司有加盟网点或快递系统里面设置预付款结算的功能，主要是设置总部或分拨中心进行系统自动扣费的设置，一般第三方物流系统不涉及到该功能的设置。
+            </p>
+
+
+        </main>
+    </div>
+</div>
+
+<hr>
+<%include ../include/footer.html %>
+</body>
+
+
+</html>

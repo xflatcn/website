@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<head xmlns="http://www.w3.org/1999/html">
+    <title>人与组织-APP365第三方物流系统</title>
+    <%include ../include/head_res.html %>
+
+    <link href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://getbootstrap.com/assets/css/docs.min.css" rel="stylesheet"/>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-146052-10', 'getbootstrap.com');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body>
+<%include ../include/top_nav.html %>
+
+<div class="container-fluid">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <form class="bd-search d-flex align-items-center">
+                <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+                <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>
+                </button>
+            </form>
+
+            <nav class="collapse bd-links" id="bd-docs-nav">
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_start.html">
+                        开始使用
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_order.html">
+                        订单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_dispatch.html">
+                        车辆调度
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_track.html">
+                        跟踪
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_return.html">
+                        回单管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_finance_01.html">
+                        财务管理
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_abnormal.html">
+                        异常件
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_analysis.html">
+                        经营分析
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_query.html">
+                        查询
+                    </a>
+                </div>
+                <div class="bd-toc-item">
+                    <a class="bd-toc-link" href="/docs/product_manuals_service.html">
+                        客服
+                    </a>
+                </div>
+                <div class="bd-toc-item active">
+                    <a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                        基础资料
+                    </a>
+                    <ul style="list-style: none;font-size: 15px">
+                        <li><a style="font-weight: bold" class="bd-toc-link" href="/docs/product_manuals_baseinfo_01.html">
+                            1、人与组织
+                        </a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_02.html">
+                            2、商品设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_03.html">
+                            3、运输设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_04.html">
+                            4、运价管理</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_05.html">
+                            5、财务设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_06.html">
+                            6、系统设置</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_07.html">
+                            7、网站维护</a></li>
+                        <li><a class="bd-toc-link" href="/docs/product_manuals_baseinfo_08.html">
+                            8、工具及维护</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <div class="d-none d-xl-block col-xl-2 bd-toc">
+            <ul class="section-nav">
+                <li class="toc-entry toc-h2"><a href="#three">网点</a></li>
+                <li class="toc-entry toc-h2"><a href="#four">员工</a></li>
+                <li class="toc-entry toc-h2"><a href="#five">客户</a></li>
+                <li class="toc-entry toc-h2"><a href="#six">客户会员</a></li>
+                <li class="toc-entry toc-h2"><a href="#seven">收发货单位</a></li>
+                <li class="toc-entry toc-h2"><a href="#eight">服务商</a></li>
+            </ul>
+        </div>
+
+
+        <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" role="main">
+            <h4 style="margin-top: 30px" >
+                人与组织
+            </h4>
+            <p>
+                </br><strong id="three">网点</strong>
+                </br></br><strong style="color: red">1、网点机构就是公司的分公司或网点</strong>
+                </br></br>2、公司的网点信息：网点信息将会在公司的网站上显示。包含网点名称、联系人、联系方式、经营范围等信息。
+                </br></br>3、设置网点机构的编辑主要作用是增加公司的网点，即在系统中增加分公司，便于指定公司的员工在不同的网点操作；
+                </br></br>4、上级机构是增加网点的上一级机构；
+                </br></br>5、步骤：基础资料→网点→新增→填写完整→保存。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_11.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br> <strong id="four">员工</strong>
+                </br></br><strong style="color: red">1、员工的主要功能作用是给员工开通账号，让员工有自己的账号登陆到系统里面进行操作和系统记录员工资料；</strong>
+                </br></br>2、在新增加员工的时候，必须准备无误的填写新增加员工的<strong style="color: red">手机号码</strong>，因为系统会将初始密码发送至用户对应的<strong style="color: red">手机短信</strong>中；而员工登陆系统的用户名就是在增加员工资料时所填写的手机号码。
+                </br></br>3、所属机构就是将员工分配在所属的网点登陆；
+                </br></br>4、步骤：基础资料→员工→新增→填写完整→保存
+                </br></br>5、在【任职状态】栏中，填写“在职”，如果员工以后因为原因不在公司上班，则可在此选填“离职”，把员工的状态填写成离职后，员工的用户名就不能登录进系统里面。系统里面的员工只有任职状态为“在职”的情况下可以登陆系统，其他任何状态都登陆不了系统；
+                </br></br>6、用户名第一次登陆系统，密码是由系统发送的初始密码。如要改变登录的密码，则需要回到系统登录的界面，点击【忘记密码或重置密码】，按照提示操作即可。或可参考公司的主页www.app365.com，按顺序点击：服务与支持>>产品问答>>APP365物流系统，用户怎样重设密码?或点击链接查看重设密码的方法：
+                <br/>http://www.app365.com/news/7c5f2e75-e60c-49e1-95bc-1b38d03f101a.jhtml
+                <br/><strong style="color: red">修改密码也可由系统管理员在员工资料里面，填写密码的位置直接填写新的密码保存修改；</strong>
+                </br></br>7、当增加的员工为公司的业务员或司机的时候，应在职员类型位置勾选小件员或勾选为司机；
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_12.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br>8、指定机构：是指定的员工可以在一个地方，通过设置指定的机构的方式，查看多个网点和进行多个网点的操作。比如说现在员工登陆网点是深圳，在管理员给员工指定访问上海网点之后，登陆员工就可以在网页右上角登录人位置切换到上海，进行上海网点的操作。
+                </br></br>9、步骤：基础资料→员工→选择员工→指定机构→选择机构→保存
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_13.png" class="img-fluid" alt="feature1" />
+            </div>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_14.png" class="img-fluid" alt="feature1" />
+            </div>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_15.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br> <strong id="five">客户</strong>
+                </br></br>1、物流公司的客户资料可以在系统里面可以管理公司的普通客户、VIP客户、月结客户和零散客户，对客户进行分级、进行维护等。
+                </br></br>2、客户资料尽量维护完整，便于后续表格统计的准确性，也便于在运单信息录入的时候，准确选择客户资料；
+                </br></br>3、步骤：基础资料→客户→新增客户→填写客户资料→保存
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_16.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br>4、客户的资料可以修改，一个客户可以增加多个联系人和增加多个装卸货地点。
+                </br></br>5、删除客户，目前系统不提供客户删除功能。因为客户产生了历史数据，删除会对系统数据的完整性产生影响，所以只有进行客户合并 将相同的客户或是需要进行合并的客户合并在一起，客户合并之后，在客户下面的地点和联系人会一起合并在客户下面；
+                </br></br>6、在客户对应的联系人及用户功能里面，可以给客户开通账号，客户可以通过开通的账号登录到会员系统中，管理可以自己的发货下单统计以及账单对账，打印运单及标签等等操作。
+                </br></br><strong style="color: red">7、维护月结客户，必须在客户资料录入里面，结算相关信息中，勾选为是否可月结或默认为月结。</strong>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_17.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br> <strong id="six">客户会员</strong>
+                </br></br>1、客户会员就是物流公司给VIP重要客户在系统中开通使用账户，VIP客户可以用物流公司给开通的账号进行登陆系统，管理客户自己的业务情况；可以进行网上自行下单、查看下单的状况、审核下单情况、发货管理、打印标签、统计对账、统计历史发货情况<strong style="color: red">（客户VIP会员账号登录系统，只能查看自己的收发货情况，不能查看自己以为的数据，且VIP账户的操作除了可以自行下单以为，其他的数据只能查看，不能操作）</strong>。
+                </br></br>2、给客户开通的会员后，客户登陆系统的账号是在开通会员是填写的手机号码，密码则会由系统发送短信到手机上。客户也可以自己更改密码，更改密码的方法和员工更改密码的步骤一样；
+                </br></br>3、开通客户会员的方法请参考公司网站www.app365.com主页，点击步骤：服务与支持>>产品问答>>如何给客户开通客户开通会员系统或点击链接查看开通会员的方法：
+                http://www.app365.com/news/f6d1c77c-c497-4b36-920a-885370b0c3dd.jhtml
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_18.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br>4、会员客户登录系统显示的界面，会员客户只能管理自己的收发货的情况，同时会员客户还可以在系统中管理会员自己与其他客户的收发货资料。
+                </br></br>5、会员客户登陆到系统以后，可以使用excel表格批量导入订单，直接生成系统订单。
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_19.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br> <strong id="seven">收发货单位</strong>
+                </br></br>1、收发货单位指的是物流公司客户的收发货单位，同一个客户可以有多个收发货单位。列如公司的厂家客户A同时拥有多个仓库发货，这时该客户就拥有多个发货单位；
+                </br></br>2、客户的收发货单位在列表框中可以新增、修改、删除收发货单位的装卸货地点和联系人；
+                </br></br>3、收发货单位也可在录单的时候，完整录入，系统自动保存到收发货基础资料里面。
+                </br></br>4、操作步骤：设置人与组织收发货单位选择对应的客户新增填写收发货单位资料保存
+                </br></br>5、<strong style="color: red">收发货单位必须对应到客户。</strong>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_20.png" class="img-fluid" alt="feature1" />
+            </div>
+
+            <p>
+                </br></br> <strong id="eight">服务商</strong>
+                </br></br>1、服务商也就是公司业务进行中转外包的第三方公司或个人，在填写服务商的资料的时候可以给服务商进行分级等操作。包含专线公司，保险公司，个人等。
+                </br></br>2、服务商的类型可分为：物流、送货、安装、维修等等；
+                </br></br>3、如果维护的服务商资料是公司下家的物流公司，还可以给下家物流公司开通系统账号，下家物流公司的账号与系统的单独的，只是可以通过中转外包把运单直接转到下家系统里面；
+                </br></br>4、服务商不支持删除，如果有重复的服务商，可以选择讲重复的服务商进行合并。
+                </br></br><strong style="color: red">5、系统可以维护服务商的服务网点和网点的服务区域，系统可根据参数设置，在中转外包的时候，系统根据服务的信誉等级、服务网点、服务区域自动匹配运单中转外包的服务商，自动中转外包操作，从而提高调度的工作效率。</strong>
+            </p>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_21.png" class="img-fluid" alt="feature1" />
+            </div>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_22.png" class="img-fluid" alt="feature1" />
+            </div>
+            <div class="image_div">
+                <img src="/images/product_manuals/baseinfo_23.png" class="img-fluid" alt="feature1" />
+            </div>
+
+        </main>
+    </div>
+</div>
+
+<hr>
+<%include ../include/footer.html %>
+</body>
+
+
+</html>
